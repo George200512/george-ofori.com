@@ -36,18 +36,17 @@ img{
   border: 1px solid #A50044;
   background: #A50044;
   border-radius: 10px;
-  padding: 6px;
+  padding: 20px 5px 20px 5px;
 }
 
 nav {
   background: #004D98;
-  color: white;
 }
 
 
 li{
-  padding: 10px;
   width: 100%;
+  padding: 5px;
 }
 
 
@@ -93,12 +92,48 @@ li a:active{
   border-bottom-right-radius: 40px;
 }
 
-p{
-  margin: 25px 0 0 0;
+#introduction{
   line-height: 20px;
-  text-align: center;
+  text-align: left;
+}
+
+#mainContent{
+  margin: 30px 10px 20px 10px;
 }
 
 body{
   font-family: sans-serif, arial;
+}
+
+li a{
+  display: block;
+  padding: 10px;
+}
+
+@keyframes colorAnimation {
+  0%{
+      background: linear-gradient(to left, #004D98, #A50044);
+  }
+  100%{
+    background: linear-gradient(to right, #A50044, #004D98);
+  }
+}
+
+#businessButton{
+  width: 200px;
+  height: 70px;
+  animation: colorAnimation 3s ease-in 0s infinite alternate;
+  margin: 10px 0 20px 10px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+/*Screen view for tablets */
+
+@media screen and(min-width: 768px){
+  img{
+    width: 170px;
+  }
 }
