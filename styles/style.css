@@ -1,9 +1,16 @@
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+header{
+    height: 40%;
+    position: fixed;
+  width: 100%;
+  top: 0;
+}
 
 #headerContainer{
   background: #004D98;
@@ -14,12 +21,13 @@
   align-items: center;
   flex-wrap: nowrap;
   padding: 25px 0 0 0;
+  height: 50%;
 }
 
 img{
-  width: 150px;
+  width: 100%;
   border-radius: 30px;
-  height: 120px;
+  height: 100%;
   border: 3px solid white;
   margin: 0 10px 0 0;
 }
@@ -27,7 +35,7 @@ img{
 .description{
   white-space: normal;
   color: white;
-  font-size: 14px;
+  font-size: 1rem;;
 }
 
 #shortDescription{
@@ -37,6 +45,7 @@ img{
   background: #A50044;
   border-radius: 10px;
   padding: 20px 5px 20px 5px;
+  width: 50%;
 }
 
 nav {
@@ -46,13 +55,12 @@ nav {
 
 li{
   width: 100%;
-  padding: 5px;
 }
 
 
 ul{
   list-style-type: none;
-  padding: 0;
+  padding: 0.6rem;
   margin: 0;
   width: 100%;
 }
@@ -69,8 +77,8 @@ li a:visited{
   background: rgba(219, 0, 48, 0.6);
   color:white;
   width: 70%;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
 }
 
 li a:hover{
@@ -79,8 +87,8 @@ li a:hover{
   background: rgba(219, 0, 48, 0.6);
   color: white;
   width: 70%;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
 }
 
 li a:active{
@@ -88,17 +96,18 @@ li a:active{
   border-left: 6px solid green;
   background: rgba(219, 0, 48, 0.6);
   color: white;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
 }
 
 #introduction{
-  line-height: 20px;
+  line-height: 1.5rem;
   text-align: left;
 }
 
 #mainContent{
-  margin: 30px 10px 20px 10px;
+  margin: 20rem 0 0 0;
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 body{
@@ -107,33 +116,39 @@ body{
 
 li a{
   display: block;
-  padding: 10px;
+  padding: 0.6rem;
 }
 
-@keyframes colorAnimation {
-  0%{
-      background: linear-gradient(to left, #004D98, #A50044);
+#imageContainer{
+  width: 50%;
+  height: 100%;
+  margin: 0 0.5rem 0 0;
   }
-  100%{
-    background: linear-gradient(to right, #A50044, #004D98);
-  }
-}
+  
 
 #businessButton{
   width: 200px;
   height: 70px;
-  animation: colorAnimation 3s ease-in 0s infinite alternate;
+  background: linear-gradient(to left, #004D98, #A50044);
   margin: 10px 0 20px 10px;
   border: 1px solid white;
   color: white;
-  border-radius: 30px;
-  font-size: 20px;
+  border-radius: 1.2rem;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  width: 50vw;
 }
 
-/*Screen view for tablets */
+@media screen and (min-width: 768px){
+  #mainContent{
+    margin: 10vh 0 0 0;
+    padding: 0 0.8rem 0 0.8rem;
+  }
+}
 
-@media screen and(min-width: 768px){
-  img{
-    width: 170px;
+@media screen and (min-width: 1024px){
+  #mainContent{
+    margin: 20vh 0 0 0;
+    padding: 0 1.2rem 0 1.2rem;
   }
 }
