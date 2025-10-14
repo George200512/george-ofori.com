@@ -1,0 +1,27 @@
+
+form{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label{
+  color: white;
+  background: #A50044;
+  border: 1px solid #A50044;
+  padding: 0 1em 0 1em;
+  border-radius: 0.9em;
+  margin: 1rem;
+  display: inline-block;
+  font-size: 1.2em;
+}
+ 
+input{
+  width: 70%;
+  margin:0 0 0 0;
+  padding:10px;
+  height: 7vh;
+  display: block;
+  background: rgba(0, 64, 156, 0.5);
+  border: 1px solid rgba(0, 64, 156, 0.5);
+  border-radius: 0.5em;
+}

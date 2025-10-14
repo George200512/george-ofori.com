@@ -26,7 +26,7 @@ header{
 
 img{
   width: 100%;
-  border-radius: 30px;
+  border-radius: 0.5rem;
   height: 100%;
   border: 3px solid white;
   margin: 0 10px 0 0;
@@ -112,6 +112,7 @@ li a:active{
 
 body{
   font-family: sans-serif, arial;
+  display: none;
 }
 
 li a{
@@ -127,8 +128,8 @@ li a{
   
 
 #businessButton{
-  width: 200px;
-  height: 70px;
+  width: 15rem;
+  height: 5rem;
   background: linear-gradient(to left, #004D98, #A50044);
   margin: 10px 0 20px 10px;
   border: 1px solid white;
@@ -136,19 +137,31 @@ li a{
   border-radius: 1.2rem;
   font-size: 1.3rem;
   padding: 0.4rem;
-  width: 50vw;
 }
 
 @media screen and (min-width: 768px){
   #mainContent{
-    margin: 10vh 0 0 0;
+    margin: 30vh 0 0 0;
     padding: 0 0.8rem 0 0.8rem;
+  }
+  
+  .description {
+    white-space: normal;
+    color: white;
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1024px){
   #mainContent{
-    margin: 20vh 0 0 0;
+    margin: 50vh 0 0 0;
     padding: 0 1.2rem 0 1.2rem;
   }
+  
+  .description{
+  white-space: normal;
+  color: white;
+  font-size: 5rem;
+}
+
 }

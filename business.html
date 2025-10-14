@@ -5,10 +5,11 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content='width=device-width, initial-scale=1'>
   <meta name="author" content='Ofori George' />
-  <meta name="description" content="I design websites that are appealling and also reflects your business or personality" />
-  <meta name='revised' content='Oct 10, 2025' />
-  <link rel="stylesheet" href="styles/style.css"/>
-  <title>Portfolio-Homepage</title>
+  <meta name="description" content="Hire me or let's collaborate to make a project happen" />
+  <meta name='revised' content='Oct 13, 2025' />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel='stylesheet' href="styles/business.css" />
+  <title>Portfolio-Send A Message</title>
   <script src='scripts/jquery-3.7.1.min.js'></script>
   <script src='scripts/index.js' defer='true'></script>
 </head>
@@ -40,16 +41,18 @@
   
   <main>
     <div id="mainContent">
-      <h1>Home</h1>
-      <p id='introduction'>
-        I am a Front End Web Developer (Web Designer) by profession.
-        I create stunning websites that reflects your personality, brand or company.
-        I am bent on helping brands grow.I am also ready for collaborations or permanent roles.
-      </p>
+      <h1>Let's Talk Business</h1>
+      <form method="post">
+        <label for="username" >Your Name* </label> 
+        <input name='username' placeholder="Username" />
+        <label for='telephone'>Your Phone* </label> <br />
+        <input type="tel" name="telephone" placeholder="xxxxxxx..." /> 
+        <label for='message'>Your message* </label> 
+        <textarea name='message' rows='10' cols='20'></textarea> 
+        <input type='button' value="Send" name='sendButton'>
+      </form> 
     </div>
-    
-    <button id='businessButton'>Lets talk business.</button>
-  </main>
+      </main>
   
   <!-- The footer content -->
   
