@@ -15,7 +15,7 @@ $(document).ready(function () {
 			}else{
 					if (errorMessage){
 							errorMessage.hide();
-							$(this).css("border-bottom", "1px solid rgba(0, 64, 156, 0.5)").filter(":hover").css("border-bottom", "0.2rem solid #006400");
+							$(this).css("border-bottom", "1px solid rgba(0, 64, 156, 0.5)").filter(":hover");
 					}
 			}
 	}	

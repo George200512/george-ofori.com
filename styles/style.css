@@ -111,7 +111,7 @@ li a:active{
 }
 
 #mainContent{
-  margin: 20rem 0 0 0;
+  margin: 45vh 0 0 0;
   padding: 0 0.5rem 0 0.5rem;
 }
 
@@ -148,24 +148,87 @@ li a{
 
 @media screen and (min-width: 768px){
   #mainContent{
-    margin: 30vh 0 0 0;
+    margin: 40vh 0 0 0;
     padding: 0 0.8rem 0 0.8rem;
   }
   
   .description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  #shortDescription{
+    margin: 15px;
+    
+  }
+  
+  #imageContainer{
+    margin: 15px;
+  }
+  
+  li a{
+    font-size: 1.3rem;
+  }
+  
+  .description{
+    margin: 10px;
+  }
+  
+  #introduction{
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+  
+  #businessButton{
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+  
+  h1{
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1024px){
   #mainContent{
-    margin: 50vh 0 0 0;
+    margin: 40vh 0 0 0;
     padding: 0 1.2rem 0 1.2rem;
   }
   
   .description{
-  font-size: 5rem;
-    height: 80%;
+  font-size: 2rem;
+    line-height: 3rem;
 }
 
+  li a{
+    font-size: 2rem;
+  }
+  
+  #shortDescription{
+    margin: 20px;
+  }
+  
+  #imageContainer{
+    margin: 20px;
+  }
+  
+  .description{
+    margin: 15px;
+  }
+  
+  #introduction{
+    font-size: 2.3rem;
+    line-height: 2.9rem;
+  }
+  
+  #businessButton{
+    font-size: 2rem;
+    padding: 1rem;
+    height: 7rem;
+    width: 20rem;
+  }
+  
+  h1{
+    font-size: 2rem;
+  }
 }
