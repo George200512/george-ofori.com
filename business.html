@@ -11,8 +11,9 @@
   <link rel='stylesheet' href="styles/business.css" />
   <title>Portfolio-Send A Message</title>
   <script src='scripts/jquery-3.7.1.min.js'></script>
+  <script src="scripts/email.min.js"></script>
   <script src='scripts/index.js' defer='true'></script>
-  <script src="scripts/business.js" defer="true"></script>
+  <script src="scripts/business.js" defer="true" type="module"></script>
 </head>
 <body>
   <!-- Header Container -->
@@ -45,12 +46,12 @@
       <h1>Let's Talk Business</h1>
       <form method="post">
         <label for="username" >Your Name* </label>
-        <input name='username' placeholder="After input press enter" />
-        <label for='telephone' class="hidden">Your Phone* </label> 
-        <input type="tel" name="telephone" placeholder="After input press enter" class="hidden" /> 
+        <input name='username' placeholder="After input press enter" required />
+        <label for='email' class="hidden">Your Email* </label> 
+        <input type="email" name="email" placeholder="After input press enter" class="hidden" required /> 
         <label for='message' class="hidden">Your message* </label> 
         <textarea name='message' rows='2' cols='20' class='hidden' ></textarea> 
-        <input type='button' value="Send" name='sendButton' class='hidden' >
+        <input type='submit' value="Send" name='sendButton' class='hidden' >
       </form> 
     </div>
       </main>
