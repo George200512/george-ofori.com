@@ -44,7 +44,7 @@
   <main>
     <div id="mainContent">
       <h1>Let's Talk Business</h1>
-      <form method="post">
+      <form id="contactForm">
         <label for="username" >Your Name* </label>
         <input name='username' placeholder="After input press enter" required />
         <label for='email' class="hidden">Your Email* </label> 
@@ -53,6 +53,11 @@
         <textarea name='message' rows='2' cols='20' class='hidden' ></textarea> 
         <input type='submit' value="Send" name='sendButton' class='hidden' >
       </form> 
+    </div>
+    
+    <div id="modalBox">
+      <div id="message"></div>
+      <button>&times;</button>
     </div>
       </main>
   
