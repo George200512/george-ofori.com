@@ -41,7 +41,7 @@ textarea[name="message"]{
   margin: 0;
   padding: 0.9rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(0, 64, 156, 0.5);
+  border: 0.07rem solid rgba(0, 64, 156, 0.5);
   background: rgba(0, 64, 156, 0.5);
   font-size: 1.3rem;
   color: white;
@@ -80,6 +80,7 @@ input[name="sendButton"].hidden{
   display: none;
 }
 
+
 @media screen and (min-width: 768px){
   label{
     font-size: 1.8rem;
@@ -103,8 +104,9 @@ input[name="sendButton"].hidden{
   position: fixed;
   bottom: 10vh;
   border-radius: 1rem;
-  left: 50vw;
+  left: 20%;
   display: none;
+  right: 20%
 }
 
 #message{

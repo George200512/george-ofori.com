@@ -27,6 +27,7 @@ $(document).ready(function () {
 		$("input[name='username']").on(
 		"keydown", function (event) {
 				if (event.key === 'Enter' && $(this).val().trim().length < 25 && $(this).val().trim().length > 0){
+						event.preventDefault();
 											$("label[for='email']").removeClass('hidden').css('display', 'inline-block');
 						$("input[name='email']").removeClass('hidden').css('display', 'block');
 						$("input[name='email']").focus();
@@ -38,6 +39,7 @@ $(document).ready(function () {
 		$("input[name='email']").on(
 		"keydown", function (event) {
 			if (event.key === "Enter"){
+					event.preventDefault();
 								$("label[for='message']").css("display","inline-block");
 								$("textarea[name='message']").css("display", "block");
 								$("textarea[name='message']").focus();
@@ -77,7 +79,7 @@ $(document).ready(function () {
 				event.preventDefault();
 				if ($("textarea[name='message']").val().trim().length === 0){
 						if (!infoLabel){
-						infoLabel = $(`<div>Message field cant be empty.</div>`);
+						infoLabel = $(`<div>Message field can't be empty.</div>`);
 						infoLabel.insertAfter($("textarea[name='message']")).css("color", "#A50044"); 
 				}
 				infoLabel.show();
@@ -86,19 +88,25 @@ $(document).ready(function () {
 						if(infoLabel){
 								infoLabel.hide();
 						}
-						$("#message").text("Email is being sent...\nPlease wait.");
+						$("#message").text("Email is being sent...\nPlease wait.").css("display", "inline-block");
 						$("#modalBox").fadeIn(1500);
 						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);
 						
 						emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, "#contactForm")
 						
-						.then(response => {	$("#message").text("Email sent.\nWe will get back to you as soon as possible");
+						.then(response => {	$("#message").text("Email sent.\nWe will get back to you as soon as possible").css("display", "inline_block");
 						$("#modalBox").fadeIn(1500);
-						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);})
+						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);
+								document.querySelectorAll("#contactForm").forEach(input => {input.value = "";});
+						}
+						)
 						
-						.catch(error =>{	$("#message").text("Email couldnct be sent.\nPlease try again later.");
+						.catch(error =>{	$("#message").text("Email couldn't be sent.\nPlease try again later.").css("display", "inline-block");
 						$("#modalBox").fadeIn(1500);
-						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);});
+						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);
+								document.querySelectorAll("#contactForm").forEach(input => {input.value = "";});
+						}
+						);
 				}
 				
 		});
