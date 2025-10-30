@@ -17,46 +17,60 @@
 <body>
   <!-- Header Container -->
   <header>
-    <div id='headerContainer'>
-      <div id="imageContainer">
-        <img src="images/me-1.jpg" alt="My picture">
-      </div>
-      
-      <div id='shortDescription'>
-        <p class="description">George Opuni Ofori</p>
-        <p class='description'>Front End Web Developer</p>
-        <p class="description">Freelancer</p>
-      </div>
+    <div class="headerWrapper">
+      <p class="siteName">Street Python</p>
     </div>
-    <nav>
-      <ul>
-        <li><a href='index.html'><span class="fa-solid fa-house"></span>Home</a></li>
-        <li><a href='abilities.html'><span class="fa-solid fa-code"></span>Abilities</a></li>
-        <li><a href="#"><span class="fa-solid fa-suitcase"></span>Projects</a></li>
-        <li><a href="#"><span class="fa-solid fa-comments"></span>Connect with us</a></li>
-      </ul>
-    </nav>
   </header>
   
   <!-- The main content -->
   
   <main>
-    <div id="mainContent">
-      <h1>Home</h1>
-      <p id='introduction'>
-        I am a Front End Web Developer (Web Designer) by profession.
-        I create stunning websites that reflects your personality, brand or company.
-        I am bent on helping brands grow.I am also ready for collaborations or permanent roles.
-      </p>
-    </div>
+    <section id="section-1">
+      <div id="introduction-container">
+        <div id="introduction">
+          <div class="container">
+          <p class="name">George Opuni Ofori</p>
+          <p class="profession">I'm a Front End Web Developer</p>
+          </div>
+          <img src="images/me-1.jpg">
+        </div>
+        
+        <div class="hyperLinks">
+          <a href="#" class="connectLinks"><span class="fa-solid fa-comments"></span>Connect with me</a>
+          <a href="#" class="profileLinks"><span class="fa-solid fa-user"></span>Profile</a>
+        </div>
+      </div> 
+    </section>
     
-    <button id='businessButton'>Lets talk business.</button>
+    <section id="section-2">
+      <h1>Projects</h1>
+      <div class="projects-container">
+        <div class="project-1">
+          <p class="title">Street Python</p>
+          <a href="#" class="domain"><span class="fa-solid fa-globe"></span>www.street-python.com</a>
+          <p class="description">I design websites that are appealling and also reflects your business or personality.</p>
+          <a href="#" class="visitLink">Visit Site<span class="fa-solid fa-arrow-right"></span></a>
+        </div>
+        
+        <hr />
+      </div>
+    </section>
   </main>
   
   <!-- The footer content -->
   
   <footer>
-    
+    <div class="footer-container">
+      <h2>Abilities</h2>
+      <p class="skills">Html</p>
+      <progress class="proficiency" value="70" max="100">70%</progress>
+      <p class="skills">Css</p>
+      <progress class="proficiency" value="70" max="100">70%</progress>
+      <p class="skills">JavaScript</p>
+      <progress class="proficiency" value="50" max="100">50%</progress>
+      <p class="skills">Python</p>
+      <progress class="proficiency" value="90" max="100">90%</progress>
+    </div>
   </footer>
 </body>
 </html>

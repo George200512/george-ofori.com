@@ -1,234 +1,182 @@
-
 *{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-header{
-    height: 40%;
-    position: fixed;
-  width: 100%;
+.headerWrapper{
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  border-bottom: 0.07rem;
   top: 0;
-  display: inline-block;
-  background: #004D98;
+  font-size: 3vh;
+  background: rgba(0, 64, 147, 1.0);
+  font-family: Ubuntu, san-serif;
+  font-weight: bold;
 }
 
-#headerContainer{
-  background: #004D98;
-  display:inline-flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%; 
-  align-items: center;
-  flex-wrap: nowrap;
-  height: 50%;
+.siteName{
+  color: white;
 }
+
+main{
+  margin: 10vh 0 0 0;
+  padding: 1rem;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+}
+
+ #introduction{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+   gap: 1rem;
+}
+
 
 img{
-  width: 100%;
-  border-radius: 0.5rem;
-  height: 100%;
-  border: 3px solid white;
+  width: 40vw;
+  border-radius: 1rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.name{
+  font-family: Garamond, serif;
+  font-size: 4vh;
+}
+
+.profession{
+  font-family: Helvetica, san-serif;
+  font-size: 2.5vh;
+}
+
+.hyperLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0.8rem 0.8rem;
+  font-family: Arial, serif;
+}
+
+.connectLinks:link, .connectLinks:visited{
+  text-decoration: none;
+  cursor: pointer;
+  background: rgb(117, 18, 35);
+  padding: 0.7rem;
+  color: white;
+  border-radius: 0.7rem;
+}
+
+.connectLinks:hover, .connectLinks:active{
+  text-decoration: none;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: 0.07rem solid rgba(117, 18, 35);
+}
+
+.profileLinks:link, .profileLinks:visited{
+  text-decoration: none;
+  cursor: pointer;
+  background: rgb(0, 64, 147);
+  padding: 0.7rem;
+  color: white;
+  border-radius: 0.7rem;
+}
+
+.profileLinks:hover, .profileLinks:active{
+  text-decoration: none;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: 0.07rem solid rgba(0, 64, 147);
+}
+
+#section-2{
+  margin: 3vh 0 2vh 0;
+}
+
+h1, h2{
+  font-family: verdana, san-serif;
+}
+
+.projects-container{
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-1{
+  padding: 0.5rem;
+}
+
+.title{
+  font-size: 3vh;
+  font-family: Garamond, serif;
+  font-weight: bold;
+}
+
+.domain:link, .domain:visited, .domain:hover, .domain:active{
+  border-bottom: 0.1rem solid rgba(0, 64, 147);
+  text-decoration: none;
+  color: rgba(0, 64, 147);
+  font-size: 2vh;
+  cursor: pointer;
 }
 
 .description{
-  white-space: normal;
-  color: white;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  margin: 0.4rem 0.2rem;;
+  font-size: 2vh;
+  padding: 1rem 0;
 }
 
-#shortDescription{
-  font-weight: bold;
-  text-align: center;
-  border: 1px solid #A50044;
-  background: #A50044;
-  border-radius: 10px;
-  padding: 10px;;
-  width: 50%;
-  display: inline-block;
-  height: 80%;
-  margin: auto;
-}
-
-nav {
-  background: #004D98;
-}
-
-
-li{
-  width: 100%;
-}
-
-
-ul{
-  list-style-type: none;
-  padding: 0.6rem;
-  margin: 0;
-  width: 100%;
-}
-
-li a:link{
-  color: white;
-  font-weight: bold;
+.visitLink:link, .visitLink:visited{
   text-decoration: none;
-}
-
-li a:visited{
-  text-decoration: none;
-  border-left: 6px solid #004D98;
-  background: rgba(219, 0, 48, 0.6);
-  color:white;
-  width: 70%;
-  border-top-right-radius: 2.5rem;
-  border-bottom-right-radius: 2.5rem;
-}
-
-li a:hover{
-  text-decoration: none;
-  border-left: 6px solid yellow;
-  background: rgba(219, 0, 48, 0.6);
+  cursor: pointer;
+  background: rgb(0, 64, 147);
+  padding: 0.7rem;
   color: white;
-  width: 70%;
-  border-top-right-radius: 2.5rem;
-  border-bottom-right-radius: 2.5rem;
-  transition: width 2s;
+  border-radius: 0.7rem;
+  font-size: 2vh;
 }
 
-li a:active{
+.visitLink:hover, .visitLink:active{
   text-decoration: none;
-  border-left: 6px solid green;
-  background: rgba(219, 0, 48, 0.6);
-  color: white;
-  border-top-right-radius: 2.5rem;
-  border-bottom-right-radius: 2.5rem;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: 0.07rem solid rgba(0, 64, 147);
 }
 
-#introduction{
-  line-height: 1.5rem;
-  text-align: left;
+.footer-container{
+  background: rgb(200, 200, 200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-#mainContent{
-  margin: 45vh 0 0 0;
-  padding: 0 0.5rem 0 0.5rem;
+.skills{
+  font-size: 2vh;
+  margin: 0.2rem 0;
 }
 
-body{
-  font-family: sans-serif, arial;
-  display: none;
+.proficiency[value]{
+  background: green;
+  border-radius: 1rem;
 }
 
-li a{
-  display: block;
-  padding: 0.6rem;
-}
-
-#imageContainer{
-  width: 50%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  }
-  
-
-#businessButton{
-  width: 15rem;
-  height: 5rem;
-  background: linear-gradient(to left, #004D98, #A50044);
-  margin: 10px 0 20px 10px;
-  border: 1px solid white;
-  color: white;
-  border-radius: 1.2rem;
-  font-size: 1.3rem;
-  padding: 0.4rem;
-}
-
-@media screen and (min-width: 768px){
-  #mainContent{
-    margin: 40vh 0 0 0;
-    padding: 0 0.8rem 0 0.8rem;
-  }
-  
-  .description {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  
-  #shortDescription{
-    margin: 15px;
-    
-  }
-  
-  #imageContainer{
-    margin: 15px;
-  }
-  
-  li a{
-    font-size: 1.3rem;
-  }
-  
-  .description{
-    margin: 10px;
-  }
-  
-  #introduction{
-    font-size: 1.6rem;
-    line-height: 2.3rem;
-  }
-  
-  #businessButton{
-    font-size: 1.6rem;
-    padding: 0.5rem;
-  }
-  
-  h1{
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1024px){
-  #mainContent{
-    margin: 45vh 0 0 0;
-    padding: 0 1.2rem 0 1.2rem;
-  }
-  
-  .description{
-  font-size: 2rem;
-    line-height: 3rem;
-}
-
-  li a{
-    font-size: 2rem;
-  }
-  
-  #shortDescription{
-    margin: 20px;
-  }
-  
-  #imageContainer{
-    margin: 20px;
-  }
-  
-  .description{
-    margin: 15px;
-  }
-  
-  #introduction{
-    font-size: 2.3rem;
-    line-height: 2.9rem;
-  }
-  
-  #businessButton{
-    font-size: 2rem;
-    padding: 1rem;
-    height: 7rem;
-    width: 20rem;
-  }
-  
-  h1{
-    font-size: 2rem;
-  }
-}
