@@ -35,16 +35,20 @@
     <section class="form-container">
       <p class="instructions">Send me an email</p>
       <form>
-        <label>Username</label> <br />
+        <label><span class="fa-regular fa-user"></span> Username</label> <br /> 
         <input placeholder="George Ofori" name="username" /> <br />
         
-        <label>Email</label> <br />
-        <input placeholder="georgeofori2005@gmail.com" name="email" type="email" /> <br />
+        <label><span class="fa-regular fa-envelope"></span> Email</label> <br />
+        <input placeholder="georgeofori2005@gmail.com" name="email" type="email" />
+          <br />
         
-        <label>Message</label> <br />
+        <label><span class="fa-regular fa-message"></span> Message</label> <br />
         <textarea name="message"></textarea> <br />
         
+        <div class="send-container">
+          <span class="fa-solid fa-paper-plane"></span>
         <input type="submit" name="submitButton" value="Send" />
+        </div>
       </form>
     </section>
   </main>
