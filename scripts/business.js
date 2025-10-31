@@ -1,4 +1,4 @@
-import {TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID} from "./secrets.js";
+/*import {TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID} from "./secrets.js";
 
 $(document).ready(function () {
 		let errorMessage, infoLabel, counterLabel;
@@ -112,4 +112,4 @@ $(document).ready(function () {
 		});
 		
 }
-		);
+		);*/

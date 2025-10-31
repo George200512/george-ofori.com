@@ -19,53 +19,50 @@
 </head>
 <body>
   <!-- Header Container -->
-  <header>
-    <div id='headerContainer'>
-      <div id="imageContainer">
-        <img src="images/me-1.jpg" alt="My picture">
-      </div>
-      
-      <div id='shortDescription'>
-        <p class="description">George Opuni Ofori</p>
-        <p class='description'>Front End Web Developer</p>
-        <p class="description">Freelancer</p>
-      </div>
+   <header>
+    <div class="headerWrapper">
+      <p class="siteName">Street Python</p>
     </div>
-    <nav>
-      <ul>
-        <li><a href='index.html'><span class="fa-solid fa-house"></span>Home</a></li>
-        <li><a href='abilities.html'><span class="fa-solid fa-code"></span>Abilities</a></li>
-        <li><a href="#"><span class="fa-solid fa-suitcase"></span>Projects</a></li>
-        <li><a href="#"><span class="fa-solid fa-comments"></span>Connect with us</a></li>
-      </ul>
-    </nav>
   </header>
-  
+ 
   <!-- The main content -->
   
   <main>
-    <div id="mainContent">
-      <h1>Let's Talk Business</h1>
-      <form id="contactForm">
-        <label for="username" >Your Name* </label>
-        <input name='username' placeholder="After input press enter" required />
-        <label for='email' class="hidden">Your Email* </label> 
-        <input type="email" name="email" placeholder="After input press enter" class="hidden" required /> 
-        <label for='message' class="hidden">Your message* </label> 
-        <textarea name='message' rows='2' cols='20' class='hidden' ></textarea> 
-        <input type='submit' value="Send" name='sendButton' class='hidden' >
-      </form> 
-    </div>
+    <section class="sub-header">
+      <a href="index.html"><span class="fa-solid fa-less-than"></span></a> <p class="heading-1">Connect With Us</p>
+    </section> 
     
-    <div id="modalBox">
-      <div id="message"></div>
-    </div>
-      </main>
+    <section class="form-container">
+      <p class="instructions">Send me an email</p>
+      <form>
+        <label>Username</label> <br />
+        <input placeholder="George Ofori" name="username" /> <br />
+        
+        <label>Email</label> <br />
+        <input placeholder="georgeofori2005@gmail.com" name="email" type="email" /> <br />
+        
+        <label>Message</label> <br />
+        <textarea name="message"></textarea> <br />
+        
+        <input type="submit" name="submitButton" value="Send" />
+      </form>
+    </section>
+  </main>
   
   <!-- The footer content -->
   
   <footer>
-    
+     <div class="footer-container">
+      <h2>Abilities</h2>
+      <p class="skills">Html</p>
+      <progress class="proficiency" value="70" max="100">70%</progress>
+      <p class="skills">Css</p>
+      <progress class="proficiency" value="70" max="100">70%</progress>
+      <p class="skills">JavaScript</p>
+      <progress class="proficiency" value="50" max="100">50%</progress>
+      <p class="skills">Python</p>
+      <progress class="proficiency" value="90" max="100">90%</progress>
+    </div>
   </footer>
 </body>
 </html>

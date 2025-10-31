@@ -1,143 +1,91 @@
+.sub-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  gap: 0.7rem;
+  padding: 0.3rem;
+  border-bottom: 0.07rem black solid;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: whitesmoke;
+}
 
-form{
-  margin-left: auto;
-  margin-right: auto;
-  width: 80vw;
-  display: block;
+.heading-1{
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.sub-header a:link, .sub-header a:visited, .sub-header a:hover, .sub-header a:active{
+  color: black;
+}
+
+.form-container{
+  margin: 7vh 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructions{
+  padding: 1rem;
+  color: rgba(0, 64, 147, 1.0);
+  font-weight: bold;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
 }
 
 label{
-  color: white;
-  background: #A50044;
-  border: 0.07rem solid #A50044;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.9rem;
-  margin: 0.7rem;
-  font-size: 1.2rem;
+  font-size: 2.5vh;
 }
- 
+
 input{
-  width: 70%;
-  margin:0 0 0 0.7rem;
-  padding:0.9rem;
-  height: 1.25rem;
-  display: block;
-  background: rgba(0, 64, 156, 0.5);
-  border: 0.07rem solid rgba(0, 64, 156, 0.5);
+  width: 50vw;
+  height: 5vh;
+  margin: 0.5rem 0 0.5rem 0;
   border-radius: 0.5rem;
-  color: white;
-  font-size: 1rem;
+  border: 0.1rem solid rgba(0, 64, 147, 1.0);
+  padding: 0.5rem;
 }
 
-input[name='username']:focus, input[name="email"]:focus{
+input:focus{
+  border: 0.1rem solid green;
   outline: none;
-  border-bottom: 0.2rem solid #006400;
-  height: 45px;
-  transition: height 2s;
 }
 
-textarea[name="message"]{
-  width: 70%;
-  margin: 0;
-  padding: 0.9rem;
+input::placeholder{
+  font-family: "Brush Script MT", cursive;
+}
+
+textarea{
+  width: 50vw;
+  height: 10vh;
+  margin: 0.5rem 0 0.5rem 0;
   border-radius: 0.5rem;
-  border: 0.07rem solid rgba(0, 64, 156, 0.5);
-  background: rgba(0, 64, 156, 0.5);
-  font-size: 1.3rem;
-  color: white;
-  font-family: san-serif, arial;
+  border: 0.1rem solid rgba(0, 64, 147, 1.0);
+  padding: 0.5rem;
 }
 
-textarea[name="message"]:focus{
+textarea:focus{
+  border: 0.1rem solid green;
   outline: none;
-  border-bottom: 0.2rem solid #006400;
-  height: 150px;
-  transition: height 2s;
 }
-
 
 input[type="submit"]{
-  background: linear-gradient(to left, #004D98, #A50044);
-  border: 0.2rem solid linear-gradient(to left, #004D98, #A50044);
-  display: block;
-  height: 50px;
-  margin: 10px;
-}
-
-label.hidden{
-  display: none;
-  }
-
-input.hidden{
-  display: none;
-}
-
-textarea.hidden{
-  display: none;
-}
-
-input[name="sendButton"].hidden{
-  display: none;
-}
-
-
-@media screen and (min-width: 768px){
-  label{
-    font-size: 1.8rem;
-  }
-  
-  input{
-    font-size: 1.4rem;
-    margin: 0.6rem;
-  }
-  
-  input[type="submit"]{
-    font-size: 1.5rem;
-  }
-}
-
-#modalBox{
-  background: #000000;
-  padding: 0.4rem;
-  margin-left: auto;
-  margin-right: auto;
-  position: fixed;
-  bottom: 10vh;
-  border-radius: 1rem;
-  left: 20%;
-  display: none;
-  right: 20%
-}
-
-#message{
+  width: 50vw;
+  height: 5vh;
+  margin: 0.5rem 0 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 64, 147, 1.0);
+  padding: 0.5rem;
+  background: linear-gradient(to left, rgba(0, 64, 147, 1.0), rgba(117, 18, 35));
   color: white;
-  font-size: 1rem;
-  margin: 0 0.5rem 0 0;
-  float: left;
+  font-size: 2.5vh;
 }
 
-button{
-  font-size: 1rem;
-  background: black;
-  color: white;
-  border: 0.07rem inset black;
-}
-
-@media screen and (min-width:1024px){
-  label{
-    font-size: 2.3rem;
-  }
-  
-  input{
-    font-size: 2rem;
-    margin: 1rem;
-  }
-  
-  input[type="submit"]{
-    font-size: 2.2rem;
-  }
-  
-  #modalBox{
-    padding: 0.8rem;
-  }
-}
