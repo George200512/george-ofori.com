@@ -1,24 +1,24 @@
-/*import {TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID} from "./secrets.js";
+import {TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID} from "./secrets.js";
 
 $(document).ready(function () {
 		let errorMessage, infoLabel, counterLabel;
 		emailjs.init(PUBLIC_KEY);
-		$("label[for='username']").show().css("display", "inline-block");
-		$("input[name='username']").show().focus();
+		$(".status-container").hide();
+		$("input[name='username']").focus();
 		$("input[name='username']").on(
 	"input", function (event) {
 			if ($(this).val().trim().length > 25){
 					if (!errorMessage){
-							errorMessage = $('<div> Name cannot exceed 25 characters. </div>');
-							errorMessage.css("color", "#A50044").insertAfter($(this));
+							errorMessage = $('<div style="font-size: 2vh"> Name cannot exceed 25 characters. </div>');
+							errorMessage.css("color", "rgba(117, 18, 35)").insertAfter($(this));
 					}
 					errorMessage.show();
-					$(this).css("border-bottom", "3px solid #A50044");
-					setTimeout(() => {errorMessage.hide(); $(this).css('border-bottom', "1px solid rgba(0, 64, 156, 0.5)");}, 2000);
+					$(this).css("border", "0.1rem solid rgba(117, 18, 35)");
+					setTimeout(() => {errorMessage.hide(); $(this).css('border', "0.1rem solid rgba(0, 64, 147, 1.0)");}, 2000);
 			}else{
 					if (errorMessage){
 							errorMessage.hide();
-							$(this).css("border-bottom", "1px solid rgba(0, 64, 156, 0.5)").filter(":hover");
+							$(this).css("border", "0.1rem solid rgba(0, 64, 147, 1.0)");
 					}
 			}
 	}	
@@ -27,9 +27,7 @@ $(document).ready(function () {
 		$("input[name='username']").on(
 		"keydown", function (event) {
 				if (event.key === 'Enter' && $(this).val().trim().length < 25 && $(this).val().trim().length > 0){
-						event.preventDefault();
-											$("label[for='email']").removeClass('hidden').css('display', 'inline-block');
-						$("input[name='email']").removeClass('hidden').css('display', 'block');
+						event.preventDefault();	
 						$("input[name='email']").focus();
 				}
 		} 
@@ -40,8 +38,6 @@ $(document).ready(function () {
 		"keydown", function (event) {
 			if (event.key === "Enter"){
 					event.preventDefault();
-								$("label[for='message']").css("display","inline-block");
-								$("textarea[name='message']").css("display", "block");
 								$("textarea[name='message']").focus();
 			}
 		}
@@ -49,21 +45,18 @@ $(document).ready(function () {
 		
 		$("textarea[name='message']").on(
 		"input", function (event) {
-			if (!$("input[name='sendButton']").is(":visible")){
-					$("input[type='submit']").show(1500);
-			}
-				let input = $(this).val().trim();
+				let input = $(this).val();
 				if (!counterLabel){
-						counterLabel = $(`<div> ${input.length} / 300 </div>`);
+						counterLabel = $(`<div style='font-size: 2vh;'> ${input.length} / 300 </div>`);
 						counterLabel.insertAfter($(this)); 
 				}
-				counterLabel.html(`<div> ${input.length} / 300</div>`);
+				counterLabel.html(`<div style="font-size:2vh;"> ${input.length} / 300</div>`);
 						if (input.length >= 300){
 								counterLabel.css({
-										"color": "#A50044",
+										"color": "rgba(117, 18, 35)",
 								});
-								$(this).css("border-bottom", "0.2rem solid #A50044");
-								setTimeout(() => {$(this).css("border-bottom", "0.2rem solid rgba(0, 64, 156, 0.5)"); counterLabel.css("color", "green");}, 2000);			
+								$(this).css("border", "0.1rem solid rgba(117, 18, 35)");
+								setTimeout(() => {$(this).css("border", "0.1rem solid rgba(0, 64, 147, 1.0)"); counterLabel.css("color", "green");}, 2000);			
 						}else{
 								counterLabel.css({
 										"color": "green",
@@ -72,15 +65,21 @@ $(document).ready(function () {
 				}
 		);
 		
-		$("textarea[name='message']").on("blur", function () {$(this).css("border-bottom", "0.2rem solid rgba(0, 64, 156, 0.5)");});
-		$("textarea[name='message']").on('focus', function () {$(this).css("border-bottom", '0.2rem solid green');});
+		$("textarea[name='message']").on("blur", function () {$(this).css("border", "0.1rem solid rgba(0, 64, 147, 1)");});
+		$("textarea[name='message']").on('focus', function () {$(this).css("border-", '0.1rem solid green');});
+		
+		$("input[name='username']").on("blur", function () {$(this).css("border", "0.1rem solid rgba(0, 64, 147, 1.0)");});
+		$("input[name='username']").on('focus', function () {$(this).css("border", '0.1rem solid green');});
+		
+		$("input[name='email']").on("blur", function () {$(this).css("border", "0.1rem solid rgba(0, 64, 147, 1.0)");});
+		$("input[name='email']").on('focus', function () {$(this).css("border", '0.1rem solid green');});
 		
 		$("input[type='submit']").on("click", function (event) {
 				event.preventDefault();
 				if ($("textarea[name='message']").val().trim().length === 0){
 						if (!infoLabel){
-						infoLabel = $(`<div>Message field can't be empty.</div>`);
-						infoLabel.insertAfter($("textarea[name='message']")).css("color", "#A50044"); 
+						infoLabel = $(`<div style="font-size:2vh;">Message field can't be empty.</div>`);
+						infoLabel.insertAfter($("textarea[name='message']")).css("color", "rgba(117, 18, 35)"); 
 				}
 				infoLabel.show();
 						setTimeout(() => {infoLabel.hide();}, 2000);
@@ -88,28 +87,33 @@ $(document).ready(function () {
 						if(infoLabel){
 								infoLabel.hide();
 						}
-						$("#message").text("Email is being sent...\nPlease wait.").css("display", "inline-block");
-						$("#modalBox").fadeIn(1500);
-						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);
+						$(".message").text("Email is being sent...\nPlease wait.");
+						$(".status-container").fadeIn(1500);
+						setTimeout(() => {$(".status-container").fadeOut(1500);}, 3000);
 						
-						emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, "#contactForm")
+						emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, $("form"))
 						
-						.then(response => {	$("#message").text("Email sent.\nWe will get back to you as soon as possible").css("display", "inline_block");
-						$("#modalBox").fadeIn(1500);
-						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);
-								document.querySelectorAll("#contactForm").forEach(input => {input.value = "";});
+						.then(response => {	$(".message").text("Email sent.\nWe will get back to you as soon as possible");
+						$(".status-container").fadeIn(1500);
+						setTimeout(() => {$(".status-container").fadeOut(1500);}, 3000);
+								document.querySelectorAll("form").forEach(input => {input.value = "";});
 						}
 						)
-						
-						.catch(error =>{	$("#message").text("Email couldn't be sent.\nPlease try again later.").css("display", "inline-block");
-						$("#modalBox").fadeIn(1500);
-						setTimeout(() => {$("#modalBox").fadeOut(1500);}, 3000);
-								document.querySelectorAll("#contactForm").forEach(input => {input.value = "";});
+								.catch(error =>{	$(".message").text("Email couldn't be sent.\nPlease try again later.");
+						$(".status-container").fadeIn(1500);
+						setTimeout(() => {$(".status-container").fadeOut(1500);}, 3000);
+								document.querySelectorAll("form").forEach(input => {input.value = "";});
 						}
 						);
 				}
 				
 		});
 		
+		$(".status-container .fa-xmark").click(
+		function (event){
+				$(".status-container").hide();
+		}
+		);
+		
 }
-		);*/
+		);
