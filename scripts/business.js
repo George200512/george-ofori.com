@@ -3,7 +3,6 @@ import {TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID} from "./secrets.js";
 $(document).ready(function () {
 		let errorMessage, infoLabel, counterLabel;
 		emailjs.init(PUBLIC_KEY);
-		$(".status-container").hide();
 		$("input[name='username']").focus();
 		$("input[name='username']").on(
 	"input", function (event) {
@@ -74,7 +73,7 @@ $(document).ready(function () {
 		$("input[name='email']").on("blur", function () {$(this).css("border", "0.1rem solid rgba(0, 64, 147, 1.0)");});
 		$("input[name='email']").on('focus', function () {$(this).css("border", '0.1rem solid green');});
 		
-		$("input[type='submit']").on("click", function (event) {
+		$("form").on("submit", function (event) {
 				event.preventDefault();
 				if ($("textarea[name='message']").val().trim().length === 0){
 						if (!infoLabel){
@@ -88,21 +87,51 @@ $(document).ready(function () {
 								infoLabel.hide();
 						}
 						$(".message").text("Email is being sent...\nPlease wait.");
-						$(".status-container").fadeIn(1500);
+						$(".status-container").css(
+						{
+								display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  borderRadius: "0.5rem",
+  padding: "1rem",
+				gap: "0.6rem"
+						}
+						).fadeIn(1500);
 						setTimeout(() => {$(".status-container").fadeOut(1500);}, 3000);
 						
-						emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, $("form"))
+						emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
 						
 						.then(response => {	$(".message").text("Email sent.\nWe will get back to you as soon as possible");
-						$(".status-container").fadeIn(1500);
+						$(".status-container").css(
+								{
+								display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  borderRadius: "0.5rem",
+  padding: "1rem",
+				gap: "0.6rem"
+								}
+				).fadeIn(1500);
 						setTimeout(() => {$(".status-container").fadeOut(1500);}, 3000);
-								document.querySelectorAll("form").forEach(input => {input.value = "";});
+							this.reset();
 						}
 						)
 								.catch(error =>{	$(".message").text("Email couldn't be sent.\nPlease try again later.");
-						$(".status-container").fadeIn(1500);
+						$(".status-container").css(
+										{
+								display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  borderRadius: "0.5rem",
+  padding: "1rem",
+				gap: "0.6rem"
+										}
+										).fadeIn(1500);
 						setTimeout(() => {$(".status-container").fadeOut(1500);}, 3000);
-								document.querySelectorAll("form").forEach(input => {input.value = "";});
+							this.reset();
 						}
 						);
 				}

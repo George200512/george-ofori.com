@@ -92,27 +92,9 @@ input[type="submit"]{
   font-size: 2.5vh;
 }
 
-.send-container{
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  align-items: center;
-  justify-content: center;
-}
-
-.fa-paper-plane{
-  position: relative;
-  left: 25%;
-  color: white;
-}
-
+  
 .status-container{
   background: rgba(117, 18, 35, 0.5);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  gap: 0.6rem;
+  display: none;
+  font-size: 2vh;
 }
