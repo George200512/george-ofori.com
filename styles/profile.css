@@ -1,0 +1,60 @@
+.section-1{
+  font-size: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: whitesmoke;
+  border-bottom: 0.1rem solid black;
+  font-weight: bold;
+}
+
+.section-2{
+  margin: 7vh 0 2.5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-me, .personal-info, .contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.personal-info-heading, .contact-heading, .abt-me-heading{
+  font-size: 3vh;
+  margin: 0 0 0.7rem 0;
+  background: linear-gradient(to top, red, yellow);
+  background-clip: text;
+  color: transparent;
+}
+
+.abt-me-content{
+  font-size: 2vh;
+}
+
+.services{
+  border: 0.1rem solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5vh 0;
+  font-size: 2vh;
+}
+
+.service-heading{
+  background: green;
+  color: white;
+  display: block;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5rem;
+}
