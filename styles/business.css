@@ -10,10 +10,10 @@
   left: 0;
   right: 0;
   background: whitesmoke;
+  font-size: 3vh;
 }
 
 .heading-1{
-  font-size: 3vh;
   font-weight: bold;
 }
 
@@ -73,6 +73,8 @@ textarea{
   border-radius: 0.5rem;
   border: 0.1rem solid rgba(0, 64, 147, 1.0);
   padding: 0.5rem;
+  text-align: center;
+  font-family: arial, serif;
 }
 
 textarea:focus{
