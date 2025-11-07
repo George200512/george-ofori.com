@@ -76,6 +76,7 @@ footer{
   gap: 1rem;
   margin: 0.8rem 0.8rem;
   font-family: Arial, serif;
+  font-size: 2.5vh;
 }
 
 .connectLinks:link, .connectLinks:visited{
@@ -202,4 +203,86 @@ h1, h2{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+@media screen and (min-width:768px){
+   .logo{
+      height: 10vh; 
+   } 
+   
+   #section-1{
+       margin: 5vh 0 3vh 0;
+   }
+   
+   .connectLinks:link{
+   padding: 0.9rem;
+   border-radius: 0.9rem;
+}
+
+.profileLinks:link{
+  padding: 0.9rem;
+  border-radius: 0.9rem;
+}
+
+   
+   .visitLink:link{
+       padding: 1.1rem;
+   }
+   
+   .branding{
+       margin: 0 0 0 1rem;
+   }
+}
+
+@media screen and (min-width:1024px){
+    .logo{
+        height: 13vh;
+    }
+    
+    #section-1{
+       margin: 7vh 0 5vh 0;
+   }
+   
+   #introduction{
+       gap: 2rem;
+   }
+   
+   .container{
+       gap: 1.5rem;
+   }
+   
+   .connectLinks:link{
+   padding: 1.1rem;
+   border-radius: 1.1rem;
+}
+
+.profileLinks:link{
+  padding: 1.1rem;
+  border-radius: 1.1rem;
+}
+
+   
+   .visitLink:link{
+       padding: 1.5rem;
+   }
+   
+   .hyperlinks{
+       gap: 1.2rem;
+   }
+   
+}
+
+@media screen and (min-width: 1440){
+    #introduction{
+        gap: 4rem;
+    }
+    
+    .container{
+        gap: 2.5rem;
+    }
+   
+   .logo{
+       height: 15vh;
+       width: 20vw;
+   }
 }
