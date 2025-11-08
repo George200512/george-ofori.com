@@ -66,7 +66,7 @@
   padding: 0.5rem;
 }
 
-.personal-info{
+.content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -89,6 +89,8 @@
   color: white;
   padding: 0.5rem;
   width: 100%;
+  position: relative;
+  top: 0;
 }
 
 .p-item-content{
@@ -127,6 +129,7 @@ li::marker{
   padding: 0.7rem;
   border-top-left-radius: 0.4rem;
   background: white;
+  width: 100%;
 }
 
 a:link, a:visited, a:active, a:hover{
@@ -134,3 +137,17 @@ a:link, a:visited, a:active, a:hover{
   text-decoration: none;
   cursor: pointer;
 }
+
+
+@media screen and (min-width: 768px){
+    .content{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .contact-item-content{
+        width: 100%;
+    }
+}
+
+

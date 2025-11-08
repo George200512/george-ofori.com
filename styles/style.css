@@ -76,7 +76,7 @@ footer{
   gap: 1rem;
   margin: 0.8rem 0.8rem;
   font-family: Arial, serif;
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 
 .connectLinks:link, .connectLinks:visited{
@@ -192,8 +192,8 @@ h1, h2{
 }
 
 .logo{
-  width: 15vw;
-  height: 7vh;
+  width: 3.1rem;;
+  heigh: 3.1rem;
   border-radius: 50%;
 }
 
@@ -206,10 +206,6 @@ h1, h2{
 }
 
 @media screen and (min-width:768px){
-   .logo{
-      height: 10vh; 
-   } 
-   
    #section-1{
        margin: 5vh 0 3vh 0;
    }
@@ -235,10 +231,7 @@ h1, h2{
 }
 
 @media screen and (min-width:1024px){
-    .logo{
-        height: 13vh;
-    }
-    
+   
     #section-1{
        margin: 7vh 0 5vh 0;
    }
@@ -270,6 +263,10 @@ h1, h2{
        gap: 1.2rem;
    }
    
+   .projects-container{
+       flex-direction: row;
+   }
+   
 }
 
 @media screen and (min-width: 1440){
@@ -281,8 +278,4 @@ h1, h2{
         gap: 2.5rem;
     }
    
-   .logo{
-       height: 15vh;
-       width: 20vw;
    }
-}
