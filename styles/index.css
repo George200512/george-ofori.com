@@ -1,0 +1,177 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face{
+  font-family: "SP Fonts";
+  src: url("../webfonts/DiplomataSC-Regular.ttf/default-font.ttf")
+  format("truetype");
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: "PoiretOne";
+  src: url('../webfonts/PoiretOne-Regular.ttf')
+  format("truetype");
+}
+
+body{
+  font-family: var(--default-font);
+  font-size: var(--font-size);
+}
+
+
+main{
+  background-image: url("../images/technology-concept-background-with-wire-mesh-text-space.png");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+:root{
+  --barca-blue: rgba(0, 65, 152, 1);
+  --barca-red: rgba(152, 0, 46, 1);
+  --default-font: "PoiretOne";
+  --font-size: 1.2rem;
+}
+
+.heading-1{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  border-bottom: 0.07rem solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+}
+
+.logo{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.branding{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.site-name{
+  font-weight: bold;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hire-button{
+  background: var(--barca-red);
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  font-family: var(--default-font);
+  font-size: var(--font-size);
+}
+
+.fa-bars{
+  background: whitesmoke;
+  border-radius: 50%;
+  color: black;
+  padding: 0.4rem;
+}
+
+.hire-form{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  display: none;
+}
+
+.hire-button:hover{
+  border: 0.09rem solid var(--barca-red);
+  color: black;
+  box-shadow: 0.1rem 0.2rem;
+  background: white;
+}
+
+
+.instruction{
+  font-family: "SP Fonts";
+  font-size: 0.8rem;
+  color: var(--barca-blue);
+}
+
+.heading-2{
+  margin-top: 5rem;
+}
+
+.input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  border: 0.07rem solid;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+}
+
+input, input:hover, textarea{
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+  font-family: var(--default-font);
+  font-weight: bold;
+}
+
+.fa-user, .fa-envelope, .fa-message{
+  border-right: 0.07rem solid;
+}
+
+#sendButton{
+  background: var(--barca-blue);
+  color: white;
+  font-size: var(--font-size);
+  padding: 0.5rem;
+}
+
+.mobile-menu{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.mobile-menu ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.8rem;
+  list-style-type: none;
+}
+
+li{
+  border-bottom: 0.07rem solid;
+}
+
+li a:link, li a:visited, li a:active li a:hover{
+  color: black;
+  text-decoration: none;
+}
+
