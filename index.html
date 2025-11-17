@@ -10,39 +10,49 @@
   <title>Street Python - Home</title>
   <link rel="stylesheet" href="styles/all.min.css" />
   <link rel="stylesheet" href="styles/index.css" />
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/index.js" defer="true" /></script>
 </head>
 <body>
   <header>
     
     <div class="heading-1">
     <div class="branding">
-      <img src="images/street-python-icon.png" class="logo" alt="Logo" />
+      <img src="images/street-python-icon.png" class="logo" alt="Logo" loading="lazy" />
       <p class="site-name">StreetPython</p>
     </div>
       
       <div class="buttons">        
       <div class="hire-button">Hire me</div>    
       <span class="fa-solid fa-bars"></span>
-        <div class="desktop-menu">
-          
-        </div> 
+        <nav class="desktop-menu">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+             <li><a href="#">About Me</a></li>
+           </ul> 
+        </nav> 
       </div>
     </div>
         
          <div class="heading-2">
-            <form class="hire-form">
+            <form class="hire-form" autocomplete method="post">
           <p class="instruction">Send Me An Email</p>
+              
+              <div class="close-button">
+              <span class="fa-solid fa-xmark"></span>
+              </div>
             
             <label for="username">Name</label>
               <div class="input">
                 <span class="fa-solid fa-user"></span> 
-                <input type="text" placeholder="Username" id="username" />
+                <input type="text" placeholder="Username" id="username" required/>
               </div>
               
               <label for="email">Email</label>
               <div class="input">
                 <span class="fa-solid fa-envelope"></span> 
-                <input type="email" placeholder="Email" id="email" />
+                <input type="email" placeholder="Email" id="email" required/>
               </div>
               
               <label for="message">Message</label>
@@ -51,7 +61,7 @@
                 <textarea id="message" rows="6"></textarea>
               </div>
               
-              <input type="button" value="Send" id="sendButton" />
+              <input type="submit" value="Send" id="sendButton" />
         </form>
             
             <nav class="mobile-menu">
@@ -60,9 +70,48 @@
                   <li><a href="#">Portfolio</a></li>
                   <li><a href="#">About Me</a></li>
                 </ul>
+              <div class="loc-cont-container"></div>
               <p class="contact"><span class="fa-solid fa-phone"></span> 0504694485</p>
               <p class="location"><span class="fa-solid fa-location"></span> Kasoa, Ghana</p>
           </nav>  
   </header>
+    
+    <main>
+      <section class="introduction">
+        <p class="name">George Opuni Ofori</p>
+        <p class="description">I design professional websites for companies and persons that want to display their products or services on visual appealing websites.</p>
+        <img src="images/file_00000000a94071f5baf7d72af64169d6.png" alt="My picture" class="me" loading="lazy" />
+      </section>
+    </main>
+    
+    <footer>
+      <div class="socialHandles">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61571375817466">
+            <span class="fa-brands fa-facebook"></span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://wa.me/+233504694485">
+              <span class="fa-brands fa-whatsapp"></span> 
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://github/George200512/">
+              <span class="fa-brands fa-github"></span>
+            </a>
+          </li>
+         
+          <li>
+            <a href="mailto:georgeofori2005@gmail.com">
+              <span class="fa-regular fa-envelope-open"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 </body>
 </html>
