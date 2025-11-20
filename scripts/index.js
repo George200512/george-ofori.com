@@ -7,29 +7,76 @@ function (event){
 						$(".hire-form").css("display", "flex");
 				}else{
 						$(".mobile-menu").hide();
+						if ($(".menu-button").hasClass("fa-xmark")){
+								$(".menu-button").removeClass("fa-xmark").addClass("fa-bars");
+						}
+									mobileMenuOpened = false;
 						$(".hire-form").css("display", "flex");
 				}
 		}
 		);
 		
-	$	(".fa-xmark").click(
+	$	(".close-form-button").click(
 		function (event){
 				$(".hire-form").hide();
 		}
 		);
+	
 		
-		$(".fa-bars").click(
+		$(".menu-button").click(
 		function () {
+				if (!mobileMenuOpened){
+						if (!$(".mobile-menu").is(":visible")){
 				if (!$(".hire-form").is(":visible")){
-						$(".mobile-menu").slideDown(100);
+						$(".mobile-menu").slideDown(1000);
+						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
+						mobileMenuOpened = true;
 				}else{
 						$(".hire-form").hide();
-						$(".mobile-menu").slideDown(100);
+						$(".mobile-menu").slideDown(1000);
+						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
+						mobileMenuOpened = true;
 				}
+						}else{
+								$(".mobile-menu").slideUp(1000);
+								if ($(".menu-button").hasClass("fa-xmark")){
+										$(".menu-button").removeClass("fa-xmark").addClass("fa-bars");
+								}
+								mobileMenuOpened = false;
+						}
+		}else{
+				if(!$(".mobile-menu").is(":visible")){
+				if (!$(".hire-form").is(":visible")){
+						$(".mobile-menu").slideDown(1000);
+						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
+						mobileMenuOpened = true;
+				}else{
+						$(".hire-form").hide();
+						$(".mobile-menu").slideDown(1000);
+						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
+						mobileMenuOpened = true;
+				}
+				}else{
+						if ($(".menu-button").hasClass("fa-xmark")){
+								$(".menu-button").removeClass("fa-xmark").addClass("fa-bars");
+						}
+						$(".mobile-menu").slideUp(1000);
+						mobileMenuOpened = false;
+				}
+		}
 		}
 		);
 		
+/*		$(".menu-button").click(
+		function (event) {
+				if ($(this).is(":visible") && (mobileMenuOpened === true)){
+						$(".mobile-menu").slideUp(1000);
+				}else{
+						$(".mobile-men").slideDown(1000);
+				}
+		}
+		);*/
+		
 		
 }
-);
-
+		);
