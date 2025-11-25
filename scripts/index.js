@@ -19,6 +19,9 @@ function (event){
 	$	(".close-form-button").click(
 		function (event){
 				$(".hire-form").hide();
+				if ($(".email-status").is(":visible")){
+						$(".email-status").hide();
+				}
 		}
 		);
 	
@@ -67,15 +70,6 @@ function (event){
 		}
 		);
 		
-/*		$(".menu-button").click(
-		function (event) {
-				if ($(this).is(":visible") && (mobileMenuOpened === true)){
-						$(".mobile-menu").slideUp(1000);
-				}else{
-						$(".mobile-men").slideDown(1000);
-				}
-		}
-		);*/
 		
 		
 }

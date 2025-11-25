@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="styles/index.css" />
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/email.min.js"></script>
   <script src="scripts/index.js" defer="true"></script>
+  <script src="scripts/form.js" defer="true" type="module"></script>
 </head>
 <body>
   <header>
@@ -72,12 +74,24 @@
                   <li><a href="#">About Me</a></li>
                 </ul>
               <div class="loc-cont-container"></div>
-              <p class="contact"><span class="fa-solid fa-phone"></span> 0504694485</p>
+              <p class="contact"><span class="fa-solid fa-phone"></span> (+233)504694485</p>
               <p class="location"><span class="fa-solid fa-location"></span> Kasoa, Ghana</p>
           </nav>  
   </header>
     
     <main>
+      <div class="email-status">
+        <div class="status-content">
+          <span class="fa-solid  status-icon"></span>
+          <p class="status"></p>
+        </div>
+        
+        <div class="status-buttons">
+          <button class="ok">Ok</button>
+          <button class="close">Close</button>
+          <button class="retry"><i class="fa-solid fa-redo"></i></button>
+        </div>
+      </div>
       <section class="introduction">
         <p class="name">George Opuni Ofori</p>
         <p class="description">I design professional websites for companies and persons that want to display their products or services on visual appealing websites.</p>

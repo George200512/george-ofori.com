@@ -30,6 +30,9 @@ main{
   font-weight: bold;
   margin: 1.5rem 0;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 :root{
@@ -202,7 +205,7 @@ input, input:hover, textarea{
   }
   
   50%{
-    transform: scaleX(1.5);
+    transform: scaleX(2);
     font-size: 1.3rem;
   }
   
@@ -212,9 +215,35 @@ input, input:hover, textarea{
   }
 }
 
-#sendButton:hover{
+@keyframes shake{
+  0%{
+    transform: rotate(0deg);
+  }
+  
+  20%{
+    transform: rotate(15deg);
+  }
+  
+  40%{
+    transform: rotate(-15deg);
+  }
+  
+  60%{
+    transform: rotate(15deg);
+  }
+  
+  80%{
+    transform: rotate(-15deg);
+  }
+  
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+#sendButton:active{
   animation-name: submitButtonIsPressed;
-  animation-duration: 0.8s;
+  animation-duration: 1s;
 }
 
 .introduction{
@@ -295,6 +324,59 @@ footer{
   display: none;
 }
 
+.email-status{
+  position: fixed;
+  top: 40%;
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  background: white;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.1rem;
+}
+
+.status-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ok, .close, .retry{
+  display: none;
+}
+
+.ok{
+  border: none;
+  font-family: var(--default-font);
+  font-size: var(--font-size);
+}
+
+.close{
+  background: white;
+  color: var(--barca-red);
+  padding: 0.4rem;
+}
+
+.retry{
+  text-align: center;
+  background: green;
+  padding: 0.5rem;
+  color: white;
+}
+
+.status-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shake{
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
 @media screen and (min-width: 992px){
   .fa-bars{
     display: none;
