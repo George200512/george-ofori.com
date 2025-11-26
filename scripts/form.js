@@ -4,7 +4,7 @@ import {PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID} from "./secrets.js";
 $(document).ready(
 function (event){
 		emailjs.init(PUBLIC_KEY);
-		let errorMessageForUsername, errorMessageForEmail, errorMessageForMessage, counter;
+		let errorMessageForUsername, errorMessageForEmail, errorMessageForMessage, counter, errorMessageForSubmit;
 		
 		$("#username").on("input", 
 		function (event){
@@ -78,7 +78,7 @@ function (event){
 								errorMessageForMessage.show();
 								counter.hide();
 								$($(this).parent()).addClass("shake");
-								setTimeout(()=>{errorMessageMessage.hide(); $($(this).parent()).removeClass("shake")}, 2000);
+								setTimeout(()=>{errorMessageForMessage.hide(); $($(this).parent()).removeClass("shake")}, 2000);
 						}else{
 							 errorMessageForMessage.hide();
 								$($(this).parent()).removeClass("shake");
@@ -102,7 +102,17 @@ function (event){
 		$(".hire-form").on("submit", function (event) {
 				event.preventDefault();
 				
-				let username = $("#username").val();
+				let inputLength = $("#message").val().length;
+				if (!errorMessageForSubmit){
+						errorMessageForSubmit = $("<p style='font-size:0.7rem; color: var(--barca-red);font-weight:bold'> Message field cannot be empty.</p>");
+							 errorMessageForSubmit.insertAfter($("#message").parent());
+				if (inputLength < 1){
+						errorMessageForSubmit.show();
+								$($("#message").parent()).addClass("shake");
+								setTimeout(()=>{errorMessageForSubmit.hide(); $($("#message").parent()).removeClass("shake")}, 2000);
+				}else{
+						errorMessageForSubmit.hide();
+						let username = $("#username").val();
 				let email = $("#email").val();
 				let message = $("#message").val();
 				
@@ -115,8 +125,35 @@ function (event){
 				})
 				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show();})
 				
-				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();})
-		});
+				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
+				}
+				}else{
+						if (inputLength < 1){
+						errorMessageForSubmit.show();
+								$($("#message").parent()).addClass("shake");
+								setTimeout(()=>{errorMessageForSubmit.hide(); $($("#message").parent()).removeClass("shake")}, 2000);
+				}else{
+						errorMessageForSubmit.hide();
+						let username = $("#username").val();
+				let email = $("#email").val();
+				let message = $("#message").val();
+				
+				$(".email-status").css("display", "flex");
+				$(".status-icon").addClass("fa-spinner").addClass("fa-spin").css("color", "rgba(0, 65, 152, 1)");
+				$(".status").text("Sending...");
+				
+				emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+						name: username, email: email, message: message
+				})
+				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show();})
+				
+				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
+				}
+				}
+		}
+		);
+				
+				
 		
 		$(".ok").click(function (event) {
 				$(".email-status").hide();
@@ -124,13 +161,23 @@ function (event){
 		});
 		
 		$(".retry").click(function (event) {
+					let username = $("#username").val();
+				let email = $("#email").val();
+				let message = $("#message").val();
+				
+				$(".email-status").css("display", "flex");
+				$(".status-icon").addClass("fa-spinner").addClass("fa-spin").css("color", "rgba(0, 65, 152, 1)");
+				$(".status").text("Sending...");
+				$(".close, .retry").hide();
 				emailjs.send(SERVICE_ID, TEMPLATE_ID, {
 						name: username, email: email, message: message
 				})
-				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show();})
+				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show(); })
 				
-				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
+				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();	});
 		});
+		
+		$(".close").click(function (event){$(".email-status").hide();});
 		
 }
 )

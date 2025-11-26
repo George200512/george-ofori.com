@@ -351,19 +351,32 @@ footer{
   border: none;
   font-family: var(--default-font);
   font-size: var(--font-size);
+  background: var(--barca-blue);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .close{
-  background: white;
-  color: var(--barca-red);
-  padding: 0.4rem;
+  background: var(--barca-red);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-family: var(--default-font);
+  font-size: var(--font-size);
 }
 
 .retry{
   text-align: center;
-  background: green;
+  background: white;
   padding: 0.5rem;
-  color: white;
+  color: var(--barca-red);
+  font-family: var(--default-font);
+  font-size: var(--font-size);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
 }
 
 .status-content{
@@ -377,6 +390,11 @@ footer{
   animation-duration: 0.5s;
   animation-timing-function: linear;
 }
+
+.dsktp-footer-container{
+  display: none;
+}
+
 @media screen and (min-width: 992px){
   .fa-bars{
     display: none;
@@ -413,5 +431,41 @@ footer{
     color: white;
     border-radius: 0.5rem;
     padding: 0.3rem;
+  }
+  
+   .socialHandles{
+    display: none;
+  }
+  
+ .dsktp-footer-container .dsktp-socialHandles{
+      display:none;
+  }
+  
+.dsktp-footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: fixed;
+    bottom: 15%;
+    left: 70%;
+ }
+ 
+ .dsktp-switch-menu{
+     display: none;
+ }
+ 
+ .icon-container {
+ padding: 1.6rem;
+ color: white;
+ background: green;
+ border-radius: 50%;
+ font-size: var(--font-size);
+   }
+  
+  .dsktp-switch-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
   }
 }
