@@ -415,6 +415,7 @@ footer{
    align-items: center;
    list-style-type: none;
    gap: 0.4rem;
+   font-weight: bold;
  } 
   
   .desktop-menu ul li{
@@ -437,8 +438,24 @@ footer{
     display: none;
   }
   
- .dsktp-footer-container .dsktp-socialHandles{
-      display:none;
+ .dsktp-footer-container .dsktp-socialHandles ul{
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      list-style-type: none;
+      border: 0.1rem solid;
+      clip-path: polygon (0%, 0%,
+          100%, 0%,
+          0%, 100%,
+          45%, 100%,
+          50%, 110%
+          );
+      padding: 1.4rem;
+      border-radius: 1rem;
+      box-shadow: 0.2rem 0.2rem 0.1rem;
+      background: white;
+      transform: scaleY(0);
+      display: flex;
   }
   
 .dsktp-footer-container{
@@ -447,12 +464,18 @@ footer{
     align-items: center;
     gap: 1.5rem;
     position: fixed;
-    bottom: 15%;
-    left: 70%;
+    bottom: 10%;
+    left: 60%;
  }
  
  .dsktp-switch-menu{
      display: none;
+     border: 0.1rem solid green;
+     color: black;
+     padding: 1rem;
+     border-radius: 0.5rem;
+     font-weight: bold;
+     background: whitesmoke;
  }
  
  .icon-container {
@@ -467,5 +490,55 @@ footer{
       display: flex;
       flex-direction: row;
       justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
   }
+  
+  .dsktp-socialHandles ul li a:link, .dsktp-socialHandles ul li a:visited{
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 0.1rem solid green;
+      display: flex;
+      flex-direction: row;
+      padding: 0.3rem;
+      gap: 1rem;
+  }
+  
+  
+  
+ .dsktp-socialHandles ul li a:hover, .dsktp-socialHandles ul li a:active{
+      background: rgba(0, 128, 0, 0.5);
+      padding: 0.5rem;
+      border-radius: 1rem;
+  }
+  
+  @keyframes open{
+      0%{
+          opacity: 0;
+          transform: scaleX(0);
+      }
+      
+      1%{
+          opacity: 1;
+          transform: scaleX(0.1);
+      }
+      
+      70%{
+          transform: scaleX(1.5);
+      }
+      
+      100%{
+          transform: scaleX(1);
+      }
+  }
+  
+  .open{
+      animation-name: open;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      transform-origin: center;
+      animation-fill-mode: forwards;
+  }
+  
 }
