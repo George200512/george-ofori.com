@@ -444,17 +444,17 @@ footer{
       gap: 1.5rem;
       list-style-type: none;
       border: 0.1rem solid;
-      clip-path: polygon (0%, 0%,
+      /*clip-path: polygon (0%, 0%,
           100%, 0%,
           0%, 100%,
           45%, 100%,
           50%, 110%
-          );
+          );*/
       padding: 1.4rem;
       border-radius: 1rem;
       box-shadow: 0.2rem 0.2rem 0.1rem;
       background: white;
-      transform: scaleY(0);
+      transform: scale(0);
       display: flex;
   }
   
@@ -516,20 +516,32 @@ footer{
   @keyframes open{
       0%{
           opacity: 0;
-          transform: scaleX(0);
+          transform: scale(0);
       }
       
       1%{
           opacity: 1;
-          transform: scaleX(0.1);
+          transform: scale(0.1);
       }
       
       70%{
-          transform: scaleX(1.5);
+          transform: scale(1.5);
       }
       
       100%{
-          transform: scaleX(1);
+          transform: scale(1);
+      }
+  }
+  
+  @keyframes close{
+      0%{
+          opacity: 0;
+          transform: scale(1.5);
+      }
+      
+      100%{
+          opacity: 1;
+          transform: scale(0);
       }
   }
   
@@ -539,6 +551,18 @@ footer{
       animation-timing-function: linear;
       transform-origin: center;
       animation-fill-mode: forwards;
+  }
+  
+  .close{
+      animation-name: close;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      transform-origin: center;
+      animation-fill-mode: forwards;
+  }
+  
+  .icon-container:active{
+    background: rgba(0, 128, 0, 0.5);
   }
   
 }

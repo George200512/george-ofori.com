@@ -1,6 +1,6 @@
 $(document).ready(
 function (event){
-		let mobileMenuOpened = true;
+		let mobileMenuOpened = true, dsktpSocialMenuClosed = true;
 		$(".hire-button").click(
 		function (event) {
 				if (!$(".mobile-menu").is(":visible")){
@@ -16,7 +16,7 @@ function (event){
 		}
 		);
 		
-	$	(".close-form-button").click(
+$(".close-form-button").click(
 		function (event){
 				$(".hire-form").hide();
 				if ($(".email-status").is(":visible")){
@@ -71,6 +71,31 @@ function (event){
 		);
 		
 		
+		$(".dsktp-switch-menu").slideDown(500);
+		        setTimeout(
+		         function () {
+		             $(".dsktp-switch-menu").slideUp(500);
+		         }, 10_000   
+		        );
+		        
+		setInterval(
+		    function () {
+		        $(".dsktp-switch-menu").slideDown(500);
+		        setTimeout(
+		         function () {
+		             $(".dsktp-switch-menu").slideUp(500);
+		         }, 10_000   
+		        );
+		    }, 120_000
+		);
+		
+		$(".icon-container").click(
+		    function (event) {
+		        let icon = $(".icon"), menu = $(".dsktp-socialHandles ul");
+		    		icon.toggleClass("fa-share-nodes fa-xmark");
+		    		menu.toggleClass("open");
+		    }
+		);
 		
 }
 		);
