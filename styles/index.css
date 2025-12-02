@@ -110,6 +110,7 @@ main{
   position: fixed;
   background: whitesmoke;
   border-radius: 1rem;
+  z-index: 1;
 }
 
 .hire-button:hover{

@@ -12,6 +12,7 @@
 .prev-button:link, .prev-button:visited,
 .prev-button:hover, .prev-button:active{
   color: black;
+  cursor: pointer;
 }
 @keyframes slideLeft{
   0%{
@@ -41,6 +42,7 @@
   animation-name: slideLeft;
   animation-fill-mode: forwards;
   animation-duration: 1s;
+  margin: 0.5rem 1rem;
 }
 
 .heading{
@@ -50,25 +52,28 @@
   padding: 0.5rem;
 }
 
-.header{
+.title{
   font-size: 1.4rem;
   color: var(--barca-blue);
 }
 
+.header{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
 .favicon{
   width: 5rem;
   height: 7rem;
   border-radius: 2rem;
 }
 
-.hire-form{
-  z-index: 1;
-}
 
 .domain:link, .domain:visited{
   font-size: 1rem;
   color: var(--barca-red);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .domain:hover, .domain:active{
@@ -88,7 +93,7 @@
 }
 
 .description{
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 main{
