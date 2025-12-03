@@ -90,13 +90,13 @@ main{
   font-size: var(--font-size);
 }
 
-.menu-button{
+.menu-button-container{
   border-radius: 0.3rem;
   color: black;
   padding: 0.7rem;
 }
 
-.menu-button:hover{
+.menu-button-container:hover{
  box-shadow: 0.2rem 0.2rem 0.2rem var(--barca-blue); 
 }
 
@@ -336,6 +336,7 @@ footer{
   padding: 1.6rem;
   border-radius: 2rem;
   box-shadow: 0.2rem 0.2rem 0.1rem;
+  z-index: 1;
 }
 
 .status-buttons{
