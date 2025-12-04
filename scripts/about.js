@@ -7,6 +7,7 @@ function (event){
 		}
 		$("#age").text(`Age: ${age}`);
 		$(".section-2").slideDown(1000).css("display", "flex");
+		$("#year").text(`${currentDate.getFullYear()}`);
 }
 
 

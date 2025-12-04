@@ -91,9 +91,9 @@ main{
 }
 
 .menu-button-container{
-  border-radius: 0.3rem;
+  border-radius: 50%;
   color: black;
-  padding: 0.7rem;
+  padding: 0.5rem;
 }
 
 .menu-button-container:hover{
