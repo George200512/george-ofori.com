@@ -65,7 +65,7 @@ main{
 
 .header{
   font-family: "SP Fonts";
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .heading-1{
@@ -154,10 +154,50 @@ footer{
   margin: 1.5rem;
 }
 
+.vision-container{
+  color: white;
+  background: black;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+
+.qualities-container{
+  color: white;
+  background: pink;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.qualities{
+  padding: 2rem;
+}
+
+.qualities .quality{
+  margin: 1rem;
+  padding: 0.5rem;
+  background: rgba(255,255,255,0.3);
+  border-radius: 1rem;
+}
+
+.quality::marker{
+  content: "\2713";
+  color: rgba(0,128,0,1);
+}
+
 @media screen and (min-width: 992px){
   .section-2{
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   .section-3{
