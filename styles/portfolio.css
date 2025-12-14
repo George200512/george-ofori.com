@@ -14,6 +14,7 @@
   color: black;
   cursor: pointer;
 }
+
 @keyframes slideLeft{
   0%{
     opacity: 0;
@@ -43,12 +44,13 @@
   animation-fill-mode: forwards;
   animation-duration: 1s;
   margin: 0.5rem 1rem;
+  box-shadow: 0.1rem 0.2rem 0.2rem;
 }
 
 .heading{
   color: black;
-  font-family: "SP Fonts";
-  font-size: 1rem;
+  font-family: "Grenze-Bold";
+  font-size: 1.5rem;
   padding: 0.5rem;
 }
 
@@ -62,10 +64,11 @@
   flex-direction: column;
   row-gap: 0.5rem;
 }
+
 .favicon{
   width: 5rem;
   height: 7rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 
@@ -98,6 +101,7 @@
 
 main{
   background: white;
+  justify-content: flex-start;
 }
 
 @media screen and (min-width:992px){

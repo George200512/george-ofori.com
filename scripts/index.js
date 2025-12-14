@@ -31,17 +31,17 @@ $(".close-form-button").click(
 				if (!mobileMenuOpened){
 						if (!$(".mobile-menu").is(":visible")){
 				if (!$(".hire-form").is(":visible")){
-						$(".mobile-menu").slideDown(1000);
+						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
 				}else{
 						$(".hire-form").hide();
-						$(".mobile-menu").slideDown(1000);
+						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
 				}
 						}else{
-								$(".mobile-menu").slideUp(1000);
+								$(".mobile-menu").slideUp(500);
 								if ($(".menu-button").hasClass("fa-xmark")){
 										$(".menu-button").removeClass("fa-xmark").addClass("fa-bars");
 								}
@@ -50,12 +50,12 @@ $(".close-form-button").click(
 		}else{
 				if(!$(".mobile-menu").is(":visible")){
 				if (!$(".hire-form").is(":visible")){
-						$(".mobile-menu").slideDown(1000);
+						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
 				}else{
 						$(".hire-form").hide();
-						$(".mobile-menu").slideDown(1000);
+						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
 				}
@@ -63,39 +63,13 @@ $(".close-form-button").click(
 						if ($(".menu-button").hasClass("fa-xmark")){
 								$(".menu-button").removeClass("fa-xmark").addClass("fa-bars");
 						}
-						$(".mobile-menu").slideUp(1000);
+						$(".mobile-menu").slideUp(500);
 						mobileMenuOpened = false;
 				}
 		}
 		}
 		);
 		
-		
-		$(".dsktp-switch-menu").slideDown(500);
-		        setTimeout(
-		         function () {
-		             $(".dsktp-switch-menu").slideUp(500);
-		         }, 10_000   
-		        );
-		        
-		setInterval(
-		    function () {
-		        $(".dsktp-switch-menu").slideDown(500);
-		        setTimeout(
-		         function () {
-		             $(".dsktp-switch-menu").slideUp(500);
-		         }, 10_000   
-		        );
-		    }, 120_000
-		);
-		
-		$(".icon-container").click(
-		    function (event) {
-		        let icon = $(".icon"), menu = $(".dsktp-socialHandles ul");
-		    		icon.toggleClass("fa-share-nodes fa-xmark");
-		    		menu.toggleClass("open");
-		    }
-		);
-		
+		       
 }
 		);
