@@ -22,6 +22,10 @@ body{
   height: 100%;
 }
 
+html{
+  height: 100vh;
+}
+
 
 main{
   background: linear-gradient(rgba(0, 65, 152, 0.5), rgba(245, 190, 0, 0.5));
@@ -241,6 +245,7 @@ input, input:hover, textarea{
   align-items: center;
   gap: 0.5rem;
   color: white;
+  height: 100%;
 }
 
 .name{
