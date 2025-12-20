@@ -141,7 +141,7 @@ function (event){
 				$(".status").text("Sending...");
 				
 				emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-						name: username, time: new Date().toString(), message: message
+						name: username, time: new Date().toString(), message: message, email: email
 				})
 				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show();})
 				
@@ -168,7 +168,7 @@ function (event){
 				$(".status").text("Sending...");
 				$(".close, .retry").hide();
 				emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-						name: username, email: email, message: message
+						name: username, email: email, message: message, time: new Date().toString()
 				})
 				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show(); })
 				
