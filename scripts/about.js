@@ -6,8 +6,8 @@ function (event){
 				age -= 1;
 		}
 		$("#age").text(`Age: ${age}`);
-		$(".section-2").slideDown(500).css("display", "flex");
-		$(".section-3").css("display", "flex").show();
+		$(".section-2").css("display", "flex").hide().slideDown(500);
+		$(".section-3").css("display", "flex");
 		$("#year").text(`2025-${currentDate.getFullYear()}`);
 }
 

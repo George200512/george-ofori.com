@@ -4,21 +4,21 @@ function (event){
 		$(".hire-button").click(
 		function (event) {
 				if (!$(".mobile-menu").is(":visible")){
-						$(".hire-form").css("display", "flex");
+						$(".overlay").css("display", "flex");
 				}else{
 						$(".mobile-menu").hide();
 						if ($(".menu-button").hasClass("fa-xmark")){
 								$(".menu-button").removeClass("fa-xmark").addClass("fa-bars");
 						}
 									mobileMenuOpened = false;
-						$(".hire-form").css("display", "flex");
+						$(".overlay").css("display", "flex");
 				}
 		}
 		);
 		
 $(".close-form-button").click(
 		function (event){
-				$(".hire-form").hide();
+				$(".overlay").hide();
 				if ($(".email-status").is(":visible")){
 						$(".email-status").hide();
 				}
@@ -30,12 +30,12 @@ $(".close-form-button").click(
 		function () {
 				if (!mobileMenuOpened){
 						if (!$(".mobile-menu").is(":visible")){
-				if (!$(".hire-form").is(":visible")){
+				if (!$(".overlay").is(":visible")){
 						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
 				}else{
-						$(".hire-form").hide();
+						$(".overlay").hide();
 						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
@@ -49,12 +49,12 @@ $(".close-form-button").click(
 						}
 		}else{
 				if(!$(".mobile-menu").is(":visible")){
-				if (!$(".hire-form").is(":visible")){
+				if (!$(".overlay").is(":visible")){
 						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;
 				}else{
-						$(".hire-form").hide();
+						$(".overlay").hide();
 						$(".mobile-menu").slideDown(500);
 						$(".menu-button").removeClass("fa-bars").addClass("fa-xmark");
 						mobileMenuOpened = true;

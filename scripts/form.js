@@ -10,13 +10,12 @@ function (event){
 		function (event){
 				let input = $(this).val();
 				if (!errorMessageForUsername){
-						console.log("No Error Message");
-						errorMessageForUsername = $("<p style='font-size:0.7rem; color: var(--barca-red);font-weight:bold'> Username cannot exceed 25 characters. </p>");
+						errorMessageForUsername = $("<p style='font-size:1rem; color: var(--barca-red);font-weight:bold'> Username cannot exceed 25 characters. </p>");
 							 errorMessageForUsername.insertAfter($(this).parent());
 						if (input.length > 25){
 								errorMessageForUsername.show();
 								$($(this).parent()).addClass("shake");
-								setTimeout(()=>{errorMessageForUsername.hide(); $($(this).parent()).removeClass("shake")}, 2000);
+								setTimeout(()=>{errorMessageForUsername.hide(); $($(this).parent()).removeClass("shake")}, 1000);
 						}else{
 							 errorMessageForUsername.hide();
 								$($(this).parent()).removeClass("shake");
@@ -25,7 +24,7 @@ function (event){
 						if (input.length > 25){
 								$($(this).parent()).addClass("shake");
 								 errorMessageForUsername.show();
-								setTimeout(()=>{errorMessageForUsername.hide(); $($(this).parent()).removeClass("shake");}, 2000);
+								setTimeout(()=>{errorMessageForUsername.hide(); $($(this).parent()).removeClass("shake");}, 1000);
 						}else{
 								$(errorMessageForUsername).hide();
 								$($(this).parent()).removeClass("shake");
@@ -37,8 +36,7 @@ function (event){
 		$("#email").on("input", 
 		function (event){
 				if (!errorMessageForEmail){
-						console.log("No Error Message");
-						errorMessageForEmail = $("<p style='font-size:0.7rem; color: var(--barca-red);font-weight:bold'> Email not valid </p>");
+						errorMessageForEmail = $("<p style='font-size:1rem; color: var(--barca-red);font-weight:bold'> Email not valid </p>");
 							 errorMessageForEmail.insertAfter($(this).parent());
 						if (!this.checkValidity()){
 								errorMessageForEmail.show();
@@ -65,14 +63,14 @@ function (event){
 		function (event){
 				let inputLength = $(this).val().length;
 				if (!counter){
-				counter = $(`<p style='font-size:0.7rem; color: var(--barca-blue);font-weight:bold'> ${inputLength}/300 </p>`);
+				counter = $(`<p style='font-size:1rem; color: var(--barca-blue);font-weight:bold'> ${inputLength}/300 </p>`);
 				counter.insertAfter($(this).parent());
 				}else{
-						counter.html(`<p style='font-size:0.7rem; color: var(--barca-blue);font-weight:bold'> ${inputLength}/300 </p>`);
+						counter.text(`${inputLength}/300`);
 				}
 				
 				if (!errorMessageForMessage){
-						errorMessageForMessage = $("<p style='font-size:0.7rem; color: var(--barca-red);font-weight:bold'> Message cannot exceed 300 characters</p>");
+						errorMessageForMessage = $("<p style='font-size:1rem; color: var(--barca-red);font-weight:bold'> Message cannot exceed 300 characters</p>");
 							 errorMessageForMessage.insertAfter($(this).parent());
 						if (inputLength > 300){
 								errorMessageForMessage.show();
@@ -104,7 +102,7 @@ function (event){
 				
 				let inputLength = $("#message").val().length;
 				if (!errorMessageForSubmit){
-						errorMessageForSubmit = $("<p style='font-size:0.7rem; color: var(--barca-red);font-weight:bold'> Message field cannot be empty.</p>");
+						errorMessageForSubmit = $("<p style='font-size:1rem; color: var(--barca-red);font-weight:bold'> Message field cannot be empty.</p>");
 							 errorMessageForSubmit.insertAfter($("#message").parent());
 				if (inputLength < 1){
 						errorMessageForSubmit.show();
@@ -125,7 +123,7 @@ function (event){
 				})
 				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show();})
 				
-				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
+				.catch(function (error) {console.log(error.message); $(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
 				}
 				}else{
 						if (inputLength < 1){
@@ -143,11 +141,11 @@ function (event){
 				$(".status").text("Sending...");
 				
 				emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-						name: username, email: email, message: message
+						name: username, time: new Date().toString(), message: message
 				})
 				.then(function () {$(".status-icon").addClass("fa-check-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "green"); $(".status").text("Sent"); $(".ok").show();})
 				
-				.catch(function (error) {$(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
+				.catch(function (error) {console.log(error.message); $(".status-icon").addClass("fa-xmark-circle").removeClass("fa-spinner").removeClass("fa-spin").css("color", "rgba(152, 0, 46, 1)"); $(".status").text("Failed"); $(".close").show(); $(".retry").show();});
 				}
 				}
 		}
@@ -180,4 +178,4 @@ function (event){
 		$(".close").click(function (event){$(".email-status").hide();});
 		
 }
-)
+);

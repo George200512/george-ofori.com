@@ -105,7 +105,7 @@ main{
   align-items: center;
   gap: 0.7rem;
   padding: 1rem;
-  display: none;
+  display: flex;
   position: fixed;
   background: white;
   border-radius: 1rem;
@@ -245,7 +245,6 @@ input, input:hover, textarea{
   align-items: center;
   gap: 0.5rem;
   color: white;
-  height: 100%;
 }
 
 .name{
@@ -404,6 +403,18 @@ footer{
 
 .dsktp-footer-container{
   display: none;
+}
+
+.overlay{
+  width: 100%;
+  display: none;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (min-width: 992px){
