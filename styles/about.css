@@ -1,3 +1,9 @@
+body{
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 
 .container-1{
   display: flex;
@@ -20,6 +26,8 @@
 main{
   background: white;
   row-gap: 1.5rem;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .section-1{
@@ -66,7 +74,7 @@ main{
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  display: none;
+  display: flex;
 }
 
 .goal-container{
@@ -81,12 +89,11 @@ main{
   box-shadow: 0.2rem 0.2rem 0.3rem;
 }
 
-.goals, .missions, .services, .profile{
-  font-size: 1rem;
-}
 
-.goal, .mission, .service, .item{
-  margin: 0.7rem;
+.goal, .mission, .service, .item, .vision, .quality{
+  margin: 1rem;
+  font-size: 1.3rem;
+  line-height: 2;
 }
 
 .mission-container{
@@ -128,7 +135,7 @@ main{
 
 
 .section-3{
-  display: none;
+  display: flex;
   flex-direction: column;
   row-gap: 1.6rem;
   color: white;
@@ -179,7 +186,7 @@ footer{
 
 .qualities .quality{
   margin: 1rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
   background: rgba(255,255,255,0.3);
   border-radius: 1rem;
 }
@@ -189,11 +196,16 @@ footer{
   color: rgba(0,128,0,1);
 }
 
+
 @media screen and (min-width: 992px){
   .section-2{
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 0 1.6rem;
   }
   
   .section-3{
