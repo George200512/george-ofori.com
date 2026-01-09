@@ -13,10 +13,6 @@
   <link rel="stylesheet" href="styles/index.css" />
   <link rel="stylesheet" href="styles/portfolio.css" />
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
-  <script src="scripts/jquery-3.7.1.min.js"></script>
-  <script src="scripts/email.min.js"></script>
-  <script src="scripts/index.js" defer="true"></script>
-  <script src="scripts/form.js" defer="true" type="module"></script>
 </head>
 <body>
   <header>
@@ -26,71 +22,31 @@
       <a href="javascript:history.back()" class="prev-button"><span class="fa-solid fa-arrow-left"></span></a>
       <p class="prev-label">Portfolio</p>
     </div>
-      
-      <div class="buttons">        
-      <div class="hire-button">Hire me</div>    
-      </div>
-    </div>
-        
-         <div class="heading-2">
-           <div class="overlay">
-            <form class="hire-form" autocomplete method="post">
-          <p class="instruction">Send Me An Email</p>
-              
-              <div class="close-button">
-              <span class="fa-solid fa-xmark close-form-button"></span>
-              </div>
-            
-            <label for="username">Name</label>
-              <div class="input">
-                <span class="fa-solid fa-user"></span> 
-                <input type="text" placeholder="Username" id="username" required/>
-              </div>
-              
-              <label for="email">Email</label>
-              <div class="input">
-                <span class="fa-solid fa-envelope"></span> 
-                <input type="email" placeholder="Email" id="email" required/>
-              </div>
-              
-              <label for="message">Message</label>
-              <div class="input">
-                <span class="fa-solid fa-message"></span> 
-                <textarea id="message" rows="6"></textarea>
-              </div>
-              
-              <input type="submit" value="Send" id="sendButton" />
-        </form>  
-           </div>             
+           
   </header>
     
     <main>
-      <div class="email-status">
-        <div class="status-content">
-          <span class="fa-solid  status-icon"></span>
-          <p class="status"></p>
-        </div>
-        
-        <div class="status-buttons">
-          <button class="ok">Ok</button>
-          <button class="close">Close</button>
-          <button class="retry"><i class="fa-solid fa-redo"></i></button>
-        </div>
-      </div>
-      
       <section class="projects">
         <h1 class="heading">My works</h1>
         <div class="projects-container">
           
         <div class="project-item">
           <div class="header">
-            <p class="title">Street Python</p>
-            <a href="https://george-ofori.vercel.app" class="domain"><span class="fa-solid fa-link"></span> https://george-ofori.vercel.app</a>
+            <a href="https://george-ofori.vercel.app" class="title"><h2>Street Python</h2></a>
           </div>
           
           <div class="content">
             <p class="description">A Ghanaian front end web developer that designs professional websites for companies.</p>
-            <img src="images/completed_projects_images/street-python-icon.png" alt="https://george-ofori.vercel.app" class="favicon"/>
+          </div>
+        </div>
+          
+        <div class="project-item">
+          <div class="header">
+            <a href="https://george200512.github.io/george-ofori/" class="title"><h2>George Ofori|Frontend Web Developer</h2></a>
+          </div>
+          
+          <div class="content">
+            <p class="description">Frontend Web Developer focused on building clean, responsive and user-friendly web interfaces</p>
           </div>
         </div>
           

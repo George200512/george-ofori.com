@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="A Ghanaian front end web developer that designs professional websites for companies" />
   <meta name="keywords" content="Street Python, fron end web developer, George Ofori" />
-  <meta name="revised" content="Dec 13 2025">
+  <meta name="revised" content="Jan-08-2026">
   <meta name="robots" content="index, follow">
   <title>Street Python</title>
   <link rel="stylesheet" href="styles/all.min.css" />
@@ -18,139 +18,50 @@
   <script src="scripts/form.js" defer="true" type="module"></script>
 </head>
 <body>
+  <!-- The header of the document -->
   <header>
-    
-    <div class="heading-1">
-    <div class="branding">
-      <img src="images/street-python-icon.png" class="logo" alt="Logo" loading="lazy" />
-      <!--<p class="site-name">StreetPython</p>-->
-    </div>
-      
-      <div class="buttons">        
-      <div class="hire-button">Hire me</div> 
-        <div class="menu-button-container">     
-      <span class="fa-solid fa-bars menu-button"></span>
-          </div> 
-        <nav class="desktop-menu">
-         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-             <li><a href="about.html">About Me</a></li>
-           </ul> 
-        </nav> 
-      </div>
-    </div>
-        
-         <div class="heading-2">
-           <div class="overlay">
-            <form class="hire-form" autocomplete method="post">
-          <p class="instruction">Send Me An Email</p>
-              
-              <div class="close-button">
-              <span class="fa-solid fa-xmark close-form-button"></span>
-              </div>
-            
-            <label for="username">Name</label>
-              <div class="input">
-                <span class="fa-solid fa-user"></span> 
-                <input type="text" placeholder="Username" id="username" required/>
-              </div>
-              
-              <label for="email">Email</label>
-              <div class="input">
-                <span class="fa-solid fa-envelope"></span> 
-                <input type="email" placeholder="Email" id="email" required/>
-              </div>
-              
-              <label for="message">Message</label>
-              <div class="input">
-                <span class="fa-solid fa-message"></span> 
-                <textarea id="message" rows="6"></textarea>
-              </div>
-              
-              <input type="submit" value="Send" id="sendButton" />
-        </form>
-           </div>
-            
-            <nav class="mobile-menu">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="about.html">About Me</a></li>
-                </ul>
-              <div class="loc-cont-container"></div>
-              <p class="contact"><span class="fa-solid fa-phone"></span> (+233)504694485</p>
-              <p class="location"><span class="fa-solid fa-location"></span> Kasoa, Accra</p>
-          </nav>  
-  </header>
-    
-    <main>
-      <div class="email-status">
-        <div class="status-content">
-          <span class="fa-solid  status-icon"></span>
-          <p class="status"></p>
-        </div>
-        
-        <div class="status-buttons">
-          <button class="ok">Ok</button>
-          <button class="close">Close</button>
-          <button class="retry"><i class="fa-solid fa-redo"></i></button>
-        </div>
-      </div>
-      
-      <section class="introduction">
-        <p class="name">George Opuni Ofori</p>
-        <p class="description">I design professional websites for companies <br /> and persons that want to display their products or services on visual appealing websites.</p>
-        <img src="images/file_00000000a94071f5baf7d72af64169d6.png" alt="My picture" class="me" loading="lazy" />
-      </section>
-      
-     <nav class="socialHandles">
+    <div class="header">
+      <img src="images/street-python-icon.png" alt="Logo" class="logo" />
+      <div class="menu-icon"><span class="fa-solid fa-bars"></span></div>
+      <nav class="desktop-menu">
         <ul>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=61571375817466">
-            <span class="fa-brands fa-facebook"></span> 
-            </a>
-          </li>
-          
-          <li>
-            <a href="https://wa.me/+233504694485">
-              <span class="fa-brands fa-whatsapp"></span> 
-            </a>
-          </li>
-          
-          <li>
-            <a href="https://github.com/George200512/">
-              <span class="fa-brands fa-github"></span> 
-            </a>
-          </li>
-         
-          <li>
-            <a href="https://m.me/Street Python">
-              <span class="fa-brands fa-facebook-messenger"></span> 
-            </a>
-          </li>
-          
-          <li>
-            <a href="https://t.me/street_python1">
-              <span class="fa-brands fa-telegram-plane"></span> 
-            </a>
-          </li>
-
-          
-          <li>
-            <a href="mailto:georgeofori2005@gmail.com">
-              <span class="fa-regular fa-envelope-open"></span> 
-            </a>
-          </li>
-
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
-      </nav> 
-      
-    </main>
+      </nav>
+    </div>
     
-    <footer>
-      
-      
-    </footer>
+    <nav class="mobile-menu">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="introduction">
+      <h1 class="name">I'm Ofori George</h1>
+      <div class="content">
+      <p class="description">I build clean, professional, user-friendly and responsive websites for companies that needs strong online presence.</p>
+        <a href="#" class="contact-btn">Contact</a>
+      </div>
+    </div>
+    
+    <img src="images/file_00000000767871f4a7eccf036a71963b.png" class="my-pic" alt="My picture" />
+  </main>
+  
+  <footer>
+    <h2>Skills </h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </footer>
 </body>
 </html>
