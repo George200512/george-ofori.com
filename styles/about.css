@@ -10,6 +10,7 @@ header{
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.97);
 }
 
 .prev-button:link, .prev-button:visited{
@@ -19,4 +20,70 @@ header{
 
 .prev-button:active, .prev-button{
   opacity: 0.5
+}
+
+.me{
+  width: 15rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--primary-color);
+}
+
+.me:active{
+  opacity: 0.5;
+}
+
+.section-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.desc, .content{
+  line-height: 1.6;
+}
+
+.section-2{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+h2{
+  color: var(--primary-color);
+}
+
+.goal-container, .mission-container,
+.services-container, .qualities-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0.1rem 0 0.1rem;
+}
+
+.services, .qualities{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (min-width:922px){
+  .section-1{
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 1.5rem 0 1.5rem; 
+  }
+  
+  .section-2{
+    display: grid;
+    grid-template-rows: auto, auto;
+  }
 }
