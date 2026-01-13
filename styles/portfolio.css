@@ -81,7 +81,7 @@ footer{
   gap: 2.5rem;
 }
 
-@media screen and (min-width:992px){
+@media screen and (min-width:922px){
   .projects-container{
     display: grid;
     justify-content: center;

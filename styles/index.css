@@ -168,7 +168,7 @@ footer ul{
   opacity: 0.5;
 }
 
-@media screen and (min-width:992px){
+@media screen and (min-width:922px){
   .mobile-menu{
     display: none;
   }

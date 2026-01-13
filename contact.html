@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="My contacts" />
+  <meta name="keywords" content="Social handles" />
+  <meta name="revised" content="11th-Jan-2026">
+  <meta name="robots" content="index, follow">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles/all.min.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/forms.js" type="module" defer="true"></script>
+</head>
+<body>
+  <header>
+    <div class="heading-1">
+      <a href="javascript:history.back()" class="prev-button"><span class="fa-solid fa-arrow-left"></span></a>
+      <p class="prev-label">About</p>
+    </div>           
+  </header>
+  
+  <main>
+    <section class="section-1">
+      <h1>Social Media Handles</h1>
+      <nav class="social-container">
+        <ul>
+          <li class="sm-handles"><a class="sm-link" href="https://wa.me/+233504694485"><span class="icon"><span class="fa-brands fa-whatsapp"></span></span> <span class="label">+233 50 469 4485</span></a></li>
+          <li class="sm-handles"><a class="sm-link" href="https://www.facebook.com/profile.php?id=61571375817466"><span class="icon"><span class="fa-brands fa-facebook"></span></span> <span class="label">Street Python</span></a></li>
+          <li class="sm-handles"><a class="sm-link" href="mailto:georgeofori2005@gmail.com"><span class="icon"><span class="fa-solid fa-envelope "></span></span> <span class="label">georgeofori@gmail.com</span></a></li>
+          <li class="sm-handles"><a class="sm-link" href="https://t.me/street_python1"><span class="icon"><span class="fa-brands fa-telegram"></span></span> <span class="label">George Ofori</span></a></li>
+          <li class="sm-handles"><a class="sm-link" href="https://m.me/george.ofori.288626"><span class="icon"><span class="fa-brands fa-facebook-messenger"></span></span> <span class="label">Street Python</span></a></li>
+          <li class="sm-handles"><a href="#" class="sm-link"><span class="icon"><span class="fa-brands fa-linkedin"></span></span> <span>George Ofori</span></a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <section class="section-2">
+      <h2>Let's Talk Business</h2>
+      
+      <form autocomplete="true">
+        <div class="input-box">
+        <input name="username" placeholder="Username" required="true"/>
+          <span class="errMsgUsername">Username cannot exceed 25 characters.</span>
+        </div>
+        
+        <div class="input-box">
+          <input name="email" type="email" placeholder="Your email" required="true"/>
+          <span class="errMsgEmail">Enter a valid email address</span>
+        </div>
+        
+        <div class="input-box">
+          <textarea rows="6" cols="23" placeholder="Message" name="message"></textarea>
+          <span class="counterLabel"></span>
+          <span class="errMsgMessage">Your message should be 300 words or less.</span>
+        </div>
+        
+        <input type="submit" name="sendBtn" value="Send" />
+      </form>
+    </section>  
+    
+    <section class="section-3">
+      <div class="card">
+        <div class="icon-container"><span class="fa-solid fa-phone"></span></div>
+        
+        <div class="body">
+          <h3>Contact</h3>
+          <p class="info">(+233) 50 469 4485</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="icon-container"><span class="fa-solid fa-location"></span></div>
+        
+        <duv class="body">
+          <h3>Location</h3>
+          <p class="info">Kasoa, Accra</p>
+        </duv>
+      </div>
+    </section>   
+    
+    <div class="status-container">
+      <div class="pending">
+        <span class="wrapper"><span class="fa-solid fa-info-circle"></span></span>
+        <p class="info">Email is being sent...</p>
+        <span class="fa-solid fa-times"></span>
+      </div>
+      
+      <div class="sent">
+        <span class="wrapper"><span class="fa-solid fa-info-circle"></span></span>
+        <p class="info">Email sent. We will kindly respond to you as soon as possible.</p>
+        <span class="fa-solid fa-times"></span>
+      </div>
+      
+      <div class="failed">
+        <span class="wrapper"><span class="fa-solid fa-info-circle"></span></span>
+        <p class="info">Email failed to sent. <span class="retry">Retry</span></p>
+        <span class="fa-solid fa-times"></span>
+      </div>
+    </div>    
+  </main>
+</body>
+</html>
