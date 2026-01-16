@@ -166,6 +166,12 @@ footer{
   color: white;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -173,7 +179,13 @@ h2{
   font-size: 1.6rem;
 }
 
-footer ul{
+.footer-1, .footer-2{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-1 ul, .footer-2 ul{
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -198,6 +210,33 @@ footer ul{
   opacity: 0.5;
 }
 
+.page:link, .page:visited{
+  color: white;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.page:hover, .page:active{
+  color: var(--secondary-color);
+}
+
+.social-container ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.sm-link:link, .sm-link:active{
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.sm-link:hover, .sm-link:active{
+  color: var(--secondary-color);
+}
 @media screen and (min-width:922px){
   .mobile-menu{
     display: none;
@@ -248,5 +287,11 @@ footer ul{
     background: white;
     color: var(--primary-color);
     border-radius: 2rem;
+  }
+  
+  .footer{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }

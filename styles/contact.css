@@ -262,6 +262,14 @@ input[name="sendBtn"]:active{
   background: var(--secondary-color);
 }
 
+.loc:link, .loc:visited{
+  cursor: pointer;
+  color: black;
+}
+
+.loc:hover, .loc:active{
+  opacity: 0.6;
+}
 @media screen and (min-width: 922px){
   .social-container ul{
     display: grid;
