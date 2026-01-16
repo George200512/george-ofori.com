@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="styles/contact.css" />
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   <script src="scripts/jquery-3.7.1.min.js"></script>
-  <script src="scripts/forms.js" type="module" defer="true"></script>
+  <script src="scripts/form.js" type="module" defer="true"></script>
+  <script src="scripts/email.min.js"></script>
 </head>
 <body>
   <header>
@@ -46,6 +47,7 @@
         <div class="input-box">
         <input name="username" placeholder="Username" required="true"/>
           <span class="errMsgUsername">Username cannot exceed 25 characters.</span>
+          <span class="errMsgUsername2">Username cannot be start with a space.</span>
         </div>
         
         <div class="input-box">
@@ -76,10 +78,10 @@
       <div class="card">
         <div class="icon-container"><span class="fa-solid fa-location"></span></div>
         
-        <duv class="body">
+        <div class="body">
           <h3>Location</h3>
           <p class="info">Kasoa, Accra</p>
-        </duv>
+        </div>
       </div>
     </section>   
     
@@ -99,6 +101,12 @@
       <div class="failed">
         <span class="wrapper"><span class="fa-solid fa-info-circle"></span></span>
         <p class="info">Email failed to sent. <span class="retry">Retry</span></p>
+        <span class="fa-solid fa-times"></span>
+      </div>
+      
+      <div class="no-content">
+        <span class="wrapper"><span class="fa-solid fa-info-circle"></span></span>
+        <p class="info">Message field is empty.</p>
         <span class="fa-solid fa-times"></span>
       </div>
     </div>    

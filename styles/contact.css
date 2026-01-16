@@ -26,6 +26,7 @@
 
 h1{
   color: black;
+  font-size: 1.7rem;
 }
 
 .social-container ul{
@@ -109,7 +110,7 @@ form{
   align-items: flex-start;
 }
 
-.errMsgUsername, .errMsgEmail, .counterLabel, .errMsgMessage{
+.errMsgUsername, .errMsgUsername2, .errMsgEmail, .errMsgMessage{
   font-size: 1rem;
   display: none;
   color: var(--secondary-color);
@@ -118,6 +119,8 @@ form{
 .counterLabel{
   text-align: right;
   color: var(--primary-color);
+  display: none;
+  font-size: 1rem;
 }
 
 input[name="sendBtn"]{
@@ -203,7 +206,7 @@ input[name="sendBtn"]:active{
 }
 
 
-.pending, .sent, .failed{
+.pending, .sent, .failed, .no-content{
   display: none;
   justify-content: center;
   gap: 0.7rem;
@@ -214,13 +217,25 @@ input[name="sendBtn"]:active{
   font-size: 1rem;
 }
 
+.retry{
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration-line: underline;
+}
 
+.retry:active{
+  color: var(--secondary-color);
+}
 
-.pending .wrapper, .sent .wrapper, .failed .wrapper{
+.pending .wrapper, .sent .wrapper, .failed .wrapper, .no-content .wrapper{
   background: var(--accent);
   color: white;
   padding: 1rem;
   border-radius: 0 1rem 1rem 0;
+}
+
+.no-content .wrapper{
+  background: var(--primary-color);
 }
 
 .info{
