@@ -10,9 +10,21 @@ function (event){
 				$(".mobile-menu").css("display", "flex").slideDown(100);
 						mobileMenuOpened = false;
 		}
-		}      
-
+		} 
 		);
+
+		$(".propel-icon").click(function (event){
+				event.preventDefault();
+				window.scrollTo(
+				{
+						top: 0,
+						behavior: "smooth"
+				}
+				);
+		});
+		
+		
+		
 }
 
-);
+ );

@@ -80,6 +80,11 @@ footer{
   background: transparent;
 }
 
+h1{
+  font-size: 1.7rem;
+  color: var(--primary-color);
+}
+
 @media screen and (min-width:922px){
   .section-1{
     flex-direction: row;

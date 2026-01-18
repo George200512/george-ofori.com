@@ -237,6 +237,25 @@ h2{
 .sm-link:hover, .sm-link:active{
   color: var(--secondary-color);
 }
+
+.social-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+.propel-icon{
+  background: var(--secondary-color);
+  padding: 1rem;
+  color: white;
+}
+
+.propel-icon:active{
+  opacity: 0.7;
+}
 @media screen and (min-width:922px){
   .mobile-menu{
     display: none;
