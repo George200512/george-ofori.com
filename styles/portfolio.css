@@ -43,10 +43,12 @@
   font-size: 1.6rem;
   color: var(--primary-color);
   text-decoration: none;
+  line-height: 1.7;
 }
 
 .title:active, .title:hover{
   text-decoration-line: underline;
+  color: var(--secondary-color);
 }
 
 .content{
@@ -55,6 +57,7 @@
   justify-content: center;
   column-gap: 0.6rem;
   padding: 0 1rem;
+  line-height: 1.6;
 }
 
 .description{
