@@ -1,96 +1,166 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A Ghanaian front end web developer that designs professional websites for companies" />
-  <meta name="keywords" content="Street Python, fron end web developer, George Ofori" />
-  <meta name="revised" content="Jan-08-2026">
-  <meta name="robots" content="index, follow">
-  <title>Street Python</title>
-  <link rel="stylesheet" href="styles/all.min.css" />
-  <link rel="stylesheet" href="styles/index.css" />
-  <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
-  <script src="scripts/jquery-3.7.1.min.js"></script>
-  <script src="scripts/email.min.js"></script>
-  <script src="scripts/index.js" defer="true"></script>
-  <script src="scripts/form.js" defer="true" type="module"></script>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A Ghanaian frontend developer and tech enthusiatbuild website for emerging firms to helping them reach more audience online. ">
+    <meta name="author" content="George Ofori">
+    <meta name="robots" content="index, follow">
+
+    <title>Street Python</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://george-ofori.vercel.app">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon/favicon-16x16.png">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="images/favicon/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Street Python">
+    <meta property="og:description" content="A Ghanaian frontend developer and tech enthusiatbuild website for emerging firms to helping them reach more audience online.">
+    <meta property="og:url" content="https://george-ofori.vercel.app">
+    <meta property="og:image" content="images/file_00000000f75481f4a8b7070b4641d236.png">
+    <meta property="og:site_name" content="Street Python">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Street Python">
+    <meta name="twitter:description" content="A Ghanaian frontend developer and tech enthusiatbuild website for emerging firms to helping them reach more audience online.">
+    <meta name="twitter:image" content="images/file_00000000f75481f4a8b7070b4641d236.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Fonts -->
+    <!-- Add Google Fonts or local fonts here -->
+    <!-- Scripts -->
+    <script src="scripts/jquery-3.7.1.min.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/bootstrap.min.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    
 </head>
+
 <body>
-  <!-- The header of the document -->
-  <header>
-    <div class="header">
-      <img src="images/street-python-icon.png" alt="Logo" class="logo" />
-      <div class="menu-icon"><span class="fa-solid fa-bars"></span></div>
-      <nav class="desktop-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="n-head">
+                <a href="index.html"><img src="images/IMG-20260904-WA0008.jpg" alt="Logo" class="logo"/></a>
+            </div>
+            
+            <div class="n-content">
+                <a href="george_opuni_ofori_cv.pdf" data-toggle="tooltip" data-placement="right" title="Download CV" class="m-item" download="GEORGE_OPUNI_OFORI_CV">
+                    <span class="bi bi-download"></span> <span class="us-label">Download</span>
+                </a>
+                <button class="share-btn" onclick="shareWebsite"><span class="bi bi-share"></span> <span class="us-label">Share</span></button>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="app">
+    <!-- Main -->
+    <main id="main-content">
+        <section class="sect-1">
+            <div class="name-label"> <span class="nm-label">Name</span> <span class="name">George Opuni Ofori</span></div>
+            
+            <h1 class="main-h1">Hello I'm a <span class="role">Frontend Web Developer</span></h1>
+            
+            <div class="s1-descr">Creating websites that converts visitors to clients. </div>
+            
+            <div class="cta-btns">
+                <a href="contact.html" class="cta-btn" aria-label="Start a project">Start A Project</a>
+                <a aria-label="view projects" class="cta-btn" href="portfolio.html">View Projects</a>
+            </div>
+            
+            <div class="social-proof-container">
+                <div class="social-proof">
+                    <div class="number" data-target="190">{{facebook_followers}}+</div>
+                    <div class="sp-label"><span class="bi bi-facebook"></span> Followers</div>
+                </div>
+                
+            <div class="social-proof">
+                <div class="number" data-target="700">{{facebook_posts}}+</div>
+                    <div class="sp-label"><span class="bi bi-facebook"></span> Posts</div>
+                </div>
+            </div>
+            
+            <div class="social-proof"> 
+            <div class="number" data-target="200">{{linkedin_connections}}+</div>
+                    <div class="sp-label"><span class="bi bi-linkedin"></span> Connections</div>
+                </div>
+            
+        <div class="social-proof">
+        <div class="number" data-target="210">{{linkedin_followers}}+</div>
+                    <div class="sp-label"><span class="bi bi-linkedin"></span> Followers</div>
+                </div>
+            </div>
+        </section>
+        
+<section class="sect-2">
+    <span class="sect-label">QuickLinks</span>
+    <h2 class="s2-h2">Take a quick tour to know more about me. </h2>
+    
+    <div class="tabs">
+        <div class="tab">
+            <div class="tab-icon"><span class="bi bi-person"></span></div>
+            <div class="tab-label">About</div>
+        </div>
+        
+        <div class="tab">
+            <div class="tab-icon"><span class="bi bi-briefcase"></span></div>
+            <div class="tab-label">Services</div>
+        </div>
+        
+        <div class="tab">
+            <div class="tab-icon"><span class="bi bi-code-square"></span></div>
+            <div class="tab-label">Projects</div>
+        </div>
+        
+        <div class="tab">
+            <div class="tab-icon"><span class="bi bi-telephone"></span></div>
+            <div class="tab-label">Contact</div>
+        </div>
     </div>
-    
-    <nav class="mobile-menu">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <div class="introduction">
-      <h1 class="name">I'm Ofori George</h1>
-      <div class="content">
-      <p class="description">I build clean, professional, user-friendly and responsive websites for companies that needs strong online presence.</p>
-        <a href="george_opuni_ofori_cv.pdf" class="contact-btn" download="GORGE_OPUNI_OFORI_CV"><span class="fa-solid fa-file-arrow-down"></span> Dowmload CV</a>
-      </div>
+</section>
+    </main>
     </div>
-    
-    <img src="images/file_00000000767871f4a7eccf036a71963b.png" class="my-pic" alt="My picture" />
-  </main>
-  
-  <footer>
-    <div class="footer">
-    <section class="footer-1">
-    <h2>Skills </h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Vue.js</li>
-    </ul>
-    </section>
-    
-    <section class="footer-2">
-      <h2>Quick Links</h2>
-      
-      <nav class="short-cuts">
-        <ul>
-          <li><a href="index.html" class="page">Home</a></li>
-          <li><a href="portfolio.html" class="page">Portfolio</a></li>
-          <li><a href="about.html" class="page">About</a></li>
-          <li><a href="contact.html" class="page">Contact</a></li>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="contacts">
+            <li class="contact-item"><a href="tele:+233504694485">Call: (+233)504694485</a></li>
+            <li class="contact-item"><a href="mailto:georgeofori2005@gmail.com">Email: georgeofori2005@gmail.com</a></li>
+            <li class="contact-item"><a href="https://wa.me/233504694485">Whatsapp: 0504694485</a></li>
         </ul>
-      </nav>
-    </section>
-    </div>
-    
-    <nav class="social-container">
-        <ul>
-          <li class="sm-handles"><a class="sm-link" href="https://wa.me/+233504694485"><span class="icon"><span class="fa-brands fa-whatsapp"></span></span></a></li>
-          <li class="sm-handles"><a class="sm-link" href="https://www.facebook.com/profile.php?id=61571375817466"><span class="icon"><span class="fa-brands fa-facebook"></span></span></a></li>
-          <li class="sm-handles"><a class="sm-link" href="https://github.com/George200512/"><span class="icon"><span class="fa-brands fa-github"></span></span></a></li>
-        </ul>
-      
-      <div class="propel-icon"><span class="fa-solid fa-arrow-up"></span></div>
-      </nav>
-    
-  </footer>
+        <div class="copyright">&copy; 2026</div>
+    </footer>
+
+
 </body>
+
 </html>

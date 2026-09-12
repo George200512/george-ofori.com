@@ -1,0 +1,72 @@
+@font-face{
+    src: url("../fonts/Inter_18pt-Regular.ttf")
+    format("truetype");
+    font-family: Inter;
+}
+
+@font-face{
+    src: url("../fonts/Orbitron-Bold.ttf")
+    format("truetype");
+    font-family: Orbitron;
+}
+
+
+:root{
+    --headings-font: Orbitron, san-serif;
+    --base-font: Inter, san-serif;
+    --primary: rgba(0,77,152,1);
+    --secondary: rgba(165,0,68,1);
+    --accent: rgba(237,187,0,1);
+    --dark: rgba(7,26,47,1);
+    --light: rgba(248,250,252,1);
+    --muted: rgba(100,116,139,1);
+    --border: 0.03rem solid var(--dark);
+    --border-radius: 0.8rem;
+    --gap: 1.2rem;
+    --transition-duration: 0.35s;
+    --line-height: 1.6;
+    --font-size: clamp(1.3rem, 1.5rem, 5vw);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-right: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-family: var(--base-font);
+}
+
+.animate-show{
+    transform: translate(0);
+    opacity: 1;
+}
+
+.animate-left, .animate-right, .animate-top{
+    opacity: 0;
+    transform: translateX(-1.2rem);
+    translate: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
+}
+
+.animate-right{
+    transform: translateX(1.2rem);
+}
+
+.animate-top{
+    transform: translateY(1rem);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--headings-font);
+}
+
+
+
