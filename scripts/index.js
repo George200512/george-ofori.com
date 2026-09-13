@@ -1,19 +1,21 @@
-$(document).ready(
-function (event){
-		let mobileMenuOpened = false;	
-		$(".menu-icon").click(
-		function () {
-				if (!mobileMenuOpened){
-						$(".mobile-menu").slideUp(100);
-						mobileMenuOpened = true;
-		}else{
-				$(".mobile-menu").css("display", "flex").slideDown(100);
-						mobileMenuOpened = false;
+const app = Vue.createApp({
+		data() {
+				return {
+						facebook_followers: 0,
+						facebook_posts: 0,
+						linkedin_connections: 0,
+						linkedin_followers: 0
+				}
+		},
+		
+		mounted() {
+				const Observer
 		}
-		} 
-		);
+});
+app.mount("#app"); 
 
-		$(".propel-icon").click(function (event){
+
+$(".elevator").click(function (event){
 				event.preventDefault();
 				window.scrollTo(
 				{
@@ -22,9 +24,3 @@ function (event){
 				}
 				);
 		});
-		
-		
-		
-}
-
- );
