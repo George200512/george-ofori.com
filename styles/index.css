@@ -1,6 +1,223 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  right: 0;
+  left: 0;
+  background: rgba(0,77,152,0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
 }
 
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+.logo{
+  width: 9rem;
+  height: 7rem;
+  border-radius: var(--border-radius);
+}
+
+.whatsapp-logo{
+  width: 5rem;
+  height: 5rem;
+}
+
+.n-content{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  font-size: 2rem;
+}
+
+.us-label{
+  display: none;
+}
+
+.m-item, .share-btn{
+  color: white;
+  transition: box-shadow var(--transition-duration) linear;
+  padding: 0 0.5rem;
+}
+
+.m-item:hover, .m-item:active, .share-btn:hover, .share-btn:active{
+  box-shadow: 0.8rem 0.8rem 0.3rem rgba(248,250,252,0.25);
+  outline: none;
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+.share-btn{
+  background: transparent;
+  border: none
+}
+
+main{
+  margin-top: 11rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sect-1{
+  background: url("../images/bg-image.jpeg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: var(--gap);
+  padding: 3rem 1.5rem;
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+}
+
+.sect-1:before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.name-label, .main-h1, .s1-descr, .cta-btns, .social-proof-container{
+  position: relative;
+  z-index: 1
+}
+
+.name-label{
+  padding: 1.2rem;
+  background: var(--primary);
+  border-radius: var(--border-radius);
+}
+
+.nm-label{
+  font-family: var(--headings-font);
+  padding: 0.6rem;
+  background: var(--secondary);
+  border-radius: var(--border-radius);
+}
+
+.role{
+  border-bottom: 0.5rem solid var(--secondary);
+}
+
+.main-h1{
+  line-height: 1.5;
+}
+
+.s1-descr{
+  font-size: 1.5rem;
+}
+
+.cta-btns{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.cta-btn{
+  color: white;
+  background: var(--accent);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: background var(--transition-duration) linear;
+}
+
+.cta-btn:nth-child(2){
+  background: var(--transparent);
+  border: 0.04rem solid white;
+  transition: background var(--transition-duration) linear;
+  color: white;
+}
+
+.cta-btn:nth-child(2):hover, .cta-btn:nth-child(2):active{
+  background: var(--accent);
+  text-decoration: none
+}
+
+.cta-btn:hover, .cta-btn:active{
+  background: transparent;
+  text-decoration: none;
+  color: white;
+}
+
+
+.social-proof-container{
+  margin-top: 1rem;
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: center;
+  align-items: center;
+}
+
+.social-proof{
+  color: var(--primary);
+  
+}
+
+.number{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.sect-2{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: center;
+}
+
+.sect-label{
+  text-align: center;
+  color: var(--secondary);
+  letter-spacing: 1rem;
+}
+
+.s2-h2{
+  color: var(--primary);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.tabs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--gap);
+  border-radius: var(--border-radius);
+}
+
+.tab{
+  background: var(--light);
+  padding: 2rem 1rem;
+  margin: 0 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+.tab-icon{
+  font-size: 2.7rem;
+  color: var(--primary);
+  text-align: center; 
+}
+
+.tab-label{
+  color: var(--primary);
+  text-align: center;
+}

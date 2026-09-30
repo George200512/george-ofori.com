@@ -24,7 +24,7 @@ $(document).ready(function (event){$(".elevator").click(function (event){
 										}
 								}
 								updateCounter();
-								
+								Observer.unobserve(e.target);
 						}
 				});
 		}, 
@@ -37,4 +37,15 @@ $(document).ready(function (event){$(".elevator").click(function (event){
 		}
 		);
 		
+
+		
 });
+
+
+function shareWebsite(event){
+		navigator.share({
+				title: "Street Python",
+				text: "Solving problems by creating functional websites for business.",
+				url: window.location.href
+		});
+		}
