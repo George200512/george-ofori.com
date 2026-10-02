@@ -37,7 +37,21 @@ $(document).ready(function (event){$(".elevator").click(function (event){
 		}
 		);
 		
-
+const animateLeft = new IntersectionObserver((entries) => {
+		entries.forEach((e)=>{
+				if (e.isIntersecting){
+						e.target.classList.remove("animate-left"); 
+						e.target.classList.add("animate-show");
+						animateLeft.unobserve(e.target);
+				}
+		});
+},
+		{threshold: 0.3});
+		
+		$(".animate-left").each((idx, ele) =>{
+				console.log(ele);
+				animateLeft.observe(ele);
+		});
 		
 });
 

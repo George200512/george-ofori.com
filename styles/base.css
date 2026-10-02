@@ -50,22 +50,32 @@ body{
     opacity: 1;
 }
 
-.animate-left, .animate-right, .animate-top{
+.animate-left{ 
     opacity: 0;
     transform: translateX(-1.2rem);
-    translate: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
+    transition: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
 }
+
+
 
 .animate-right{
     transform: translateX(1.2rem);
+    transition: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
+    opacity: 0
 }
 
 .animate-top{
     transform: translateY(1rem);
+    transition: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
+    opacity: 0
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: var(--headings-font);
+}
+
+a:focus{
+  outline: none;
 }
 
 
