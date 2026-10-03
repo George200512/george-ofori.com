@@ -80,7 +80,7 @@ main{
   gap: var(--gap);
   padding: 3rem 1.5rem;
   position: relative;
-  min-height: 400px;
+  min-height: 80vh;
   width: 100%;
 }
 
