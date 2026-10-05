@@ -40,8 +40,8 @@ $(document).ready(function (event){$(".elevator").click(function (event){
 const animateLeft = new IntersectionObserver((entries) => {
 		entries.forEach((e)=>{
 				if (e.isIntersecting){
-						e.target.classList.remove("animate-left"); 
-						e.target.classList.add("animate-show");
+						e.target.style.transform = "translate(0)"; 
+						e.target.style.opacity = "1";
 						animateLeft.unobserve(e.target);
 				}
 		});
@@ -51,6 +51,22 @@ const animateLeft = new IntersectionObserver((entries) => {
 		$(".animate-left").each((idx, ele) =>{
 				console.log(ele);
 				animateLeft.observe(ele);
+		});
+		
+		const animateTop = new IntersectionObserver((entries) => {
+		entries.forEach((e)=>{
+				if (e.isIntersecting){
+						e.target.style.transform = "translate(0)"; 
+						e.target.style.opacity = "1";
+						animateLeft.unobserve(e.target);
+				}
+		});
+},
+		{threshold: 0.3});
+		
+		$(".animate-top").each((idx, ele) =>{
+				console.log(ele);
+				animateTop.observe(ele);
 		});
 		
 });

@@ -24,8 +24,8 @@ nav{
 }
 
 .whatsapp-logo{
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 7rem;
 }
 
 .n-content{
@@ -66,6 +66,7 @@ main{
   align-items: center;
   justify-content: center;
   position: relative;
+  min-height: 100vh;
 }
 
 .sect-1{

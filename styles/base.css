@@ -45,17 +45,12 @@ body{
     font-family: var(--base-font);
 }
 
-.animate-show{
-    transform: translate(0);
-    opacity: 1;
-}
 
 .animate-left{ 
     opacity: 0;
     transform: translateX(-1.2rem);
     transition: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
 }
-
 
 
 .animate-right{
