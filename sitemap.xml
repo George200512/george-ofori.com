@@ -4,4 +4,20 @@
     <loc>https://george-ofori.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
+<url>
+    <loc>https://george-ofori.vercel.app/about.html</loc>
+    <priority>1.0</priority>
+  </url>
+<url>
+    <loc>https://george-ofori.vercel.app/portfolio.html</loc>
+    <priority>1.0</priority>
+  </url>
+<url>
+    <loc>https://george-ofori.vercel.app/services.html</loc>
+    <priority>1.0</priority>
+  </url>
+<url>
+    <loc>https://george-ofori.vercel.app/contact.html</loc>
+    <priority>1.0</priority>
+  </url>
 </urlset>
