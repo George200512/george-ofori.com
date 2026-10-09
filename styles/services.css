@@ -1,0 +1,150 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.heading-1{
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  justify-content: space-between;
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.prev-label{
+  color: var(--secondary);
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.prev-button:link, .prev-button:visited{
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.prev-button:active, .prev-button:hover{
+  opacity: 0.5
+}
+
+main{
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.sect-1{
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: center;
+}
+
+.s1-h2, .s2-h2{
+  color: var(--primary);
+  text-align: center;
+  text-decoration-color: var(--primary);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+.services-cont, .reasons-cont{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: center;
+}
+
+.service{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  background: var(--light);
+  margin: 0 0.6rem;
+  border-radius: var(--border-radius);
+  padding: 0.6rem 0.3rem;
+  align-items: center;
+  transition: box-shadow var(--transition-duration) linear;
+}
+
+.service:hover{
+  box-shadow: 0.8rem 0.8rem 1rem var(--dark);
+}
+
+.sym, .r-sym{
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+.service-h3{
+  border-bottom: 0.3rem solid var(--secondary);
+  padding-bottom: 0.2rem;
+}
+
+.sect-2{
+  background: var(--secondary);
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.s2-h2{
+  color: white;
+  text-align: center;
+  text-decoration-color: white;
+  line-height: 2
+}
+
+.r-header{
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  align-items: center
+}
+
+.r-header:hover{
+  border-bottom: 0.3rem solid var(--accent);
+}
+
+.r-sym{
+  background: var(--light);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.r-h3{
+  color: white;
+}
+
+.r-body{
+  color: white;
+}
+
+.reason{
+  padding: 1.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+@media screen and (min-width: 922px){
+  .reasons-cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+}
